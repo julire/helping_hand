@@ -9,6 +9,7 @@ function App() {
         Admin <br />
         <span>Jordan's Kitchen Sink</span>
       </h1>
+      <CounterButton />
       <NewButton />
       <p className="description">
         Built With{" "}

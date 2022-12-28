@@ -12,6 +12,7 @@ export const NewButton = () => {
       }}
     >
       <p style={{ margin: "0 0 1.5rem 0" }}>
+        This is jsx component is also from {" "}
         <code
           style={{
             padding: "0.2rem 0.3rem",
@@ -19,6 +20,7 @@ export const NewButton = () => {
             borderRadius: "0.25rem",
           }}
         >
+          ui
         </code>
       </p>
       <div>
