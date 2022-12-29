@@ -31,8 +31,8 @@ export const createServer = () => {
       return res.json({ ok: true });
     })
     .get('/project', (req, res) => {
-
-      Project.find()
+      const query = req.query
+      Project.find(query)
       .then(projects => {
         res.json({
           confirmation: 'success',
