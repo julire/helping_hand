@@ -16,6 +16,8 @@ mongoose.connect(process.env.DATABASE_URL, {
 
 export const createServer = () => {
   const app = express();
+  const Project = require('../models/Project')
+
   app
     .disable("x-powered-by")
     .use(morgan("dev"))
@@ -27,6 +29,17 @@ export const createServer = () => {
     })
     .get("/healthz", (req, res) => {
       return res.json({ ok: true });
+    })
+    .get('/project', (req, res) => {
+
+      Project.find()
+      .then(projects => {
+        res.json({
+          confirmation: 'success',
+          data: projects
+        })
+      })
+      .catch
     });
 
   return app;
