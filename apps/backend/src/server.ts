@@ -4,7 +4,8 @@ import morgan from "morgan";
 import cors from "cors";
 import mongoose from "mongoose";
 
-mongoose.Promise = global.Promise;
+
+mongoose.set('strictQuery', false)
 mongoose.connect(process.env.DATABASE_URL, {
   useNewUrlParser: true
 }).then(() => {
