@@ -3,7 +3,8 @@
   "extends": "./base.json",
   "Display": "Vite",
   "compilerOptions": {
-    "allowJs": false,
+    "allowJs": true,
+    "checkJs": false,
     "esModuleInterop": false,
     "jsx": "react",
     "lib": ["dom", "dom.iterable", "esnext"],
