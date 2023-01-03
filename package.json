@@ -9,6 +9,7 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@types/react-dom": "^18.0.10",
     "prettier": "^2.7.1",
     "turbo": "latest"
   },
