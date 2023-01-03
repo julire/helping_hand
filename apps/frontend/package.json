@@ -10,6 +10,7 @@
     "lint": "tsc --noEmit && TIMING=1 eslint \"src/**/*.ts*\""
   },
   "dependencies": {
+    "modern-css-reset": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "ui": "workspace:*"
