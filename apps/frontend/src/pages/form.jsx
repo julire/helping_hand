@@ -1,24 +1,24 @@
-import { StyledForm } from "ui";
+import { StyledForm, StyledLabel } from "ui";
 
 export function Form() {
   return (
     <section>
       <h1>Create project</h1>
       <StyledForm>
-        <label>
+        <StyledLabel>
           Title
           <input type="text" />
-        </label>
+        </StyledLabel>
 
-        <label>
+        <StyledLabel>
           Description
           <input type="text" />
-        </label>
+        </StyledLabel>
 
-        <label>
+        <StyledLabel>
           Image URL
           <input type="url" />
-        </label>
+        </StyledLabel>
 
         <button type="submit">Submit</button>
       </StyledForm>

@@ -1,10 +1,8 @@
 import styled from "styled-components";
 
-export const StyledForm = styled.form`
-  border: 2px solid black;
-  padding: 20px;
+export const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
-  gap: 20px;
   align-items: flex-start;
+  gap: 5px;
 `;
