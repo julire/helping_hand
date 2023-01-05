@@ -1,4 +1,4 @@
-import { StyledForm, StyledLabel } from "ui";
+import { StyledForm, StyledInput, StyledLabel } from "ui";
 
 export function Form() {
   return (
@@ -7,17 +7,17 @@ export function Form() {
       <StyledForm>
         <StyledLabel>
           Title
-          <input type="text" />
+          <StyledInput type="text" />
         </StyledLabel>
 
         <StyledLabel>
           Description
-          <input type="text" />
+          <StyledInput type="text" />
         </StyledLabel>
 
         <StyledLabel>
           Image URL
-          <input type="url" />
+          <StyledInput type="url" />
         </StyledLabel>
 
         <button type="submit">Submit</button>
