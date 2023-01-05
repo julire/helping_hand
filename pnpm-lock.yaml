@@ -67,7 +67,6 @@ importers:
       '@vitejs/plugin-react': ^2.1.0
       eslint: ^7.32.0
       eslint-config-custom: workspace:*
-      modern-css-reset: ^1.4.0
       react: ^18.2.0
       react-dom: ^18.2.0
       tsconfig: workspace:*
@@ -75,7 +74,6 @@ importers:
       ui: workspace:*
       vite: ^3.1.0
     dependencies:
-      modern-css-reset: 1.4.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       ui: link:../../packages/ui
@@ -1811,22 +1809,8 @@ packages:
       '@types/react': 17.0.52
     dev: true
 
-  /@types/react-dom/18.0.10:
-    resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
-    dependencies:
-      '@types/react': 18.0.26
-    dev: true
-
   /@types/react/17.0.52:
     resolution: {integrity: sha512-vwk8QqVODi0VaZZpDXQCmEmiOuyjEFPY7Ttaw5vjM112LOq37yz1CDJGrRJwA1fYEq4Iitd5rnjd1yWAc/bT+A==}
-    dependencies:
-      '@types/prop-types': 15.7.5
-      '@types/scheduler': 0.16.2
-      csstype: 3.1.1
-    dev: true
-
-  /@types/react/18.0.26:
-    resolution: {integrity: sha512-hCR3PJQsAIXyxhTNSiDFY//LhnMZWpNNr5etoCqx/iUfGc5gXWtQR2Phl908jVR6uPXacojQWTg4qRpkxTuGug==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.2
@@ -5048,10 +5032,6 @@ packages:
     hasBin: true
     dev: false
 
-<<<<<<< HEAD
-  /modern-css-reset/1.4.0:
-    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
-=======
   /mongodb-connection-string-url/2.6.0:
     resolution: {integrity: sha512-WvTZlI9ab0QYtTYnuMLgobULWhokRjtC7db9LtcVfJ+Hsnyr5eo6ZtNAt3Ly24XZScGMelOcGtm7lSn0332tPQ==}
     dependencies:
@@ -5087,7 +5067,6 @@ packages:
     transitivePeerDependencies:
       - aws-crt
       - supports-color
->>>>>>> 16eaa80e0f1a61dc010e9490fd918368d2f781d2
     dev: false
 
   /morgan/1.10.0:
