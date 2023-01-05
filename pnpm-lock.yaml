@@ -5048,10 +5048,6 @@ packages:
     hasBin: true
     dev: false
 
-<<<<<<< HEAD
-  /modern-css-reset/1.4.0:
-    resolution: {integrity: sha512-0crZmSFmrxkI7159rvQWjpDhy0u4+Awg/iOycJdlVn0RSeft/a+6BrQHR3IqvmdK25sqt0o6Z5Ap7cWgUee2rw==}
-=======
   /mongodb-connection-string-url/2.6.0:
     resolution: {integrity: sha512-WvTZlI9ab0QYtTYnuMLgobULWhokRjtC7db9LtcVfJ+Hsnyr5eo6ZtNAt3Ly24XZScGMelOcGtm7lSn0332tPQ==}
     dependencies:
@@ -5087,7 +5083,6 @@ packages:
     transitivePeerDependencies:
       - aws-crt
       - supports-color
->>>>>>> 16eaa80e0f1a61dc010e9490fd918368d2f781d2
     dev: false
 
   /morgan/1.10.0:
