@@ -1,6 +1,7 @@
-import * as React from "react";
-import "./App.css";
-import { Button } from "ui";
+import * as React from 'react';
+import './App.css';
+import { Button } from 'ui';
+import { Card } from './pages/Card';
 
 function App() {
   return (

@@ -1,0 +1,1 @@
+import { StyledCard } from 'ui';
