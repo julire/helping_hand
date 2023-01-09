@@ -1,7 +1,6 @@
 import * as React from 'react';
 import './App.css';
-import { Button } from 'ui';
-import { StyledCard } from './pages/Card';
+import { Card } from './pages/Card';
 
 function App() {
   return (
@@ -10,7 +9,7 @@ function App() {
         <h1 className="title">Helping Hand</h1>
       </header>
       <section className="card-list">
-        <StyledCard />
+        <Card />
       </section>
     </div>
   );
