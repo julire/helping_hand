@@ -1,13 +1,15 @@
 import { CardWrapper, CardHeader, CardHeading, CardBody } from 'ui';
 
-export function Card() {
+export function Card(props) {
   return (
     <CardWrapper>
-      <CardHeader>
-        <CardHeading>Project 1</CardHeading>
-      </CardHeader>
-
-      <CardBody>Here is the description</CardBody>
+      <img src={props.projectImg} alt="" />
+      <div>
+        <CardHeader>
+          <CardHeading>{props.title}</CardHeading>
+        </CardHeader>
+        <CardBody>{props.description}</CardBody>
+      </div>
     </CardWrapper>
   );
 }
