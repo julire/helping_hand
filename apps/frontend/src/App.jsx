@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import { Card } from './pages/Card';
+import { Navbar } from './pages/Navbar';
 
 function App() {
   const projects = [
@@ -31,6 +32,7 @@ function App() {
         <h1 className="title">Helping Hand</h1>
       </header>
       <section className="card-list">{listProjects}</section>
+      <Navbar />
     </div>
   );
 }
