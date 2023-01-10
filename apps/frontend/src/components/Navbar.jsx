@@ -5,12 +5,12 @@ export function Navbar() {
     <Bar>
       <MainNav>
         <NavLi>
-          <NavLink href="#">
+          <NavLink href="/">
             <span class="material-symbols-outlined">home</span>
           </NavLink>
         </NavLi>
         <NavLi>
-          <NavLink href="#">
+          <NavLink href="/add-project">
             <span class="material-symbols-outlined">add</span>
           </NavLink>
         </NavLi>
