@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Bar = styled.nav`
+  position: sticky;
+  bottom: 0;
   font-size: 18px;
   background-color: #e5e5e5;
   padding: 10px;
