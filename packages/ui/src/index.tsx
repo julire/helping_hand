@@ -1,3 +1,7 @@
 import * as React from "react";
 
-export { Button } from './Button'
+export { StyledForm } from "./StyledForm";
+export { StyledInput } from "./StyledInput";
+export { StyledLabel } from "./StyledLabel";
+export { Button } from "./Button";
+
