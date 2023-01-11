@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProjectHeader } from '../components/ProjectHeader';
+import { ProjectContainer } from '../components/ProjectContainer';
 
 export default function Project() {
   const project = {
@@ -12,7 +12,7 @@ export default function Project() {
 
   return (
     <section>
-      <ProjectHeader
+      <ProjectContainer
         projectImg={project.projectImg}
         title={project.title}
         description={project.description}
