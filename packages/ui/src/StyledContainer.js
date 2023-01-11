@@ -20,7 +20,7 @@ export const StyledContainer = styled('div')(
           '0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08)',
         borderRadius: '5px',
       },
-      NavContainer: {
+      NavWrapper: {
         display: 'block',
         width: '100%',
         fontSize: '18px',
@@ -28,6 +28,13 @@ export const StyledContainer = styled('div')(
         padding: '10px',
         margin: '10px',
         borderRadius: '5px',
+      },
+      CardBody: {
+        paddingLeft: '32px',
+        paddingRight: '32px',
+      },
+      CardHeader: {
+        padding: '32px 0',
       },
     },
   })

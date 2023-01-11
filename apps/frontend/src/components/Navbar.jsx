@@ -2,7 +2,7 @@ import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
 
 export function Navbar() {
   return (
-    <StyledContainer variant="NavContainer">
+    <StyledContainer variant="NavWrapper">
       <MainNav>
         <NavLi>
           <NavLink href="/">

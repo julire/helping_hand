@@ -1,14 +1,16 @@
-import { StyledContainer, CardHeader, CardHeading, CardBody } from 'ui';
+import { StyledContainer, StyledH1, StyledH2 } from 'ui';
 
 export function Card(props) {
   return (
     <StyledContainer variant="CardContainer">
       <img src={props.projectImg} alt="" />
       <div>
-        <CardHeader>
-          <CardHeading>{props.title}</CardHeading>
-        </CardHeader>
-        <CardBody>{props.description}</CardBody>
+        <StyledContainer variant="CardHeader">
+          <StyledH2>{props.title}</StyledH2>
+        </StyledContainer>
+        <StyledContainer variant="CardBody">
+          {props.description}
+        </StyledContainer>
       </div>
     </StyledContainer>
   );
