@@ -1,8 +1,8 @@
-import { Bar, MainNav, NavLi, NavLink } from 'ui';
+import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
 
 export function Navbar() {
   return (
-    <Bar>
+    <StyledContainer variant="NavContainer">
       <MainNav>
         <NavLi>
           <NavLink href="/">
@@ -15,6 +15,6 @@ export function Navbar() {
           </NavLink>
         </NavLi>
       </MainNav>
-    </Bar>
+    </StyledContainer>
   );
 }

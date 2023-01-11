@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Bar = styled.nav`
+export const StyledNav = styled.nav`
+  width: 100%;
   font-size: 18px;
   background-color: #e5e5e5;
   padding: 10px;

@@ -1,8 +1,8 @@
-import { CardWrapper, CardHeader, CardHeading, CardBody } from 'ui';
+import { StyledContainer, CardHeader, CardHeading, CardBody } from 'ui';
 
 export function Card(props) {
   return (
-    <CardWrapper>
+    <StyledContainer variant="CardContainer">
       <img src={props.projectImg} alt="" />
       <div>
         <CardHeader>
@@ -10,6 +10,6 @@ export function Card(props) {
         </CardHeader>
         <CardBody>{props.description}</CardBody>
       </div>
-    </CardWrapper>
+    </StyledContainer>
   );
 }
