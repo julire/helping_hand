@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
+import Project from './pages/project';
 import { Navbar } from './components/Navbar';
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
           <h1 className="title">Helping Hand</h1>
         </header>
         <Routes>
-          <Route exact path="/" exact element={<Home />} />
+          <Route path="/" element={<Home />} />
+          <Route path="project" element={<Project />} />
         </Routes>
         <Navbar />
       </div>
