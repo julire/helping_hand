@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./App.css";
 import { Card } from "./pages/Card";
-import { Form } from ".pages/Form";
+import { Form } from "./pages/Form";
 
 function App() {
   const projects = [
@@ -22,6 +22,7 @@ function App() {
   return (
     <div className="container">
       <header>
+        <Form />
         <h1 className="title">Helping Hand</h1>
       </header>
       <section className="card-list">

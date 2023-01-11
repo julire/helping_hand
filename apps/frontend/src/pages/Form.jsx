@@ -1,5 +1,4 @@
 import { StyledForm, StyledInput, StyledLabel } from "ui";
-import { StyledLabel } from "../../../packages/ui/src/StyledLabel";
 
 export function Form() {
     return (
