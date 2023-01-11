@@ -1,14 +1,14 @@
-import { CardWrapper, CardHeader, CardHeading, CardBody } from 'ui';
+import { CardBody, CardHeader, CardHeading, CardWrapper } from "ui";
 
-export function Card(props) {
+export function Card({ projectImg, title, description }) {
   return (
     <CardWrapper>
-      <img src={props.projectImg} alt="" />
+      <img src={projectImg} alt="" />
       <div>
         <CardHeader>
-          <CardHeading>{props.title}</CardHeading>
+          <CardHeading>{title}</CardHeading>
         </CardHeader>
-        <CardBody>{props.description}</CardBody>
+        <CardBody>{description}</CardBody>
       </div>
     </CardWrapper>
   );
