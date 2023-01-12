@@ -1,44 +1,26 @@
-import * as React from "react";
-import "./App.css";
-import { Card } from "./pages/Card";
-import { Form } from "./pages/Form";
+import * as React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages';
+import { Navbar } from './components/Navbar';
+import { StyledContainer } from 'ui';
+import { StyledH1 } from 'ui';
+import { Form } from './pages/Form';
 
 function App() {
-  const projects = [
-    {
-      projectImg:
-        "https://www.doctorswithoutborders.org/sites/default/files/MSF163911%28High%29_0.jpg",
-      title: "Project 1",
-      description: "This is the description of project 1",
-    },
-    {
-      projectImg:
-        "https://www.greenpeace.org/static/planet4-eastasia-stateless/2016/06/57ad1ec0-gp02d1n_web_size_with_credit_line.jpg",
-      title: "Project 2",
-      description: "This is the description of project 2",
-    },
-  ];
-
   return (
-    <div className="container">
-      <header>
-        <Form />
-        <h1 className="title">Helping Hand</h1>
-      </header>
-      <section className="card-list">
-        <ul>
-          {projects.map((project) => {
-            return (
-              <Card
-                projectImg={project.projectImg}
-                title={project.title}
-                description={project.description}
-              />
-            );
-          })}
-        </ul>
-      </section>
-    </div>
+    <Router>
+      <StyledContainer>
+        <header>
+          <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
+        </header>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/add-project" element={<Form />} />
+        </Routes>
+        <Navbar />
+      </StyledContainer>
+    </Router>
   );
 }
 
