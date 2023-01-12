@@ -9,8 +9,9 @@
     "test": "turbo run test"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.26",
     "prettier": "^2.8.2",
-    "turbo": "^1.6.3"
+    "turbo": "^1.7.0"
   },
   "packageManager": "pnpm@7.15.0",
   "dependencies": {

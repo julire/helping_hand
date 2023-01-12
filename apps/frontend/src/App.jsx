@@ -4,20 +4,24 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import Project from './pages/project';
 import { Navbar } from './components/Navbar';
+import { StyledContainer } from 'ui';
+import { StyledH1 } from 'ui';
+import { Form } from './pages/Form';
 
 function App() {
   return (
     <Router>
-      <div className="page-container">
+      <StyledContainer>
         <header>
-          <h1 className="title">Helping Hand</h1>
+          <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/add-project" element={<Form />} />
           <Route path="project" element={<Project />} />
         </Routes>
-      </div>
-      <Navbar />
+        <Navbar />
+      </StyledContainer>
     </Router>
   );
 }

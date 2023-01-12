@@ -26,5 +26,5 @@ export default function Home() {
       description={project.description}
     />
   ));
-  return <section className="card-list">{listProjects}</section>;
+  return <section>{listProjects}</section>;
 }

@@ -1,20 +1,20 @@
-import { Bar, MainNav, NavLi, NavLink } from 'ui';
+import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
 
 export function Navbar() {
   return (
-    <Bar>
+    <StyledContainer variant="NavWrapper">
       <MainNav>
         <NavLi>
           <NavLink href="/">
-            <span class="material-symbols-outlined">home</span>
+            <span className="material-symbols-outlined">home</span>
           </NavLink>
         </NavLi>
         <NavLi>
           <NavLink href="/add-project">
-            <span class="material-symbols-outlined">add</span>
+            <span className="material-symbols-outlined">add</span>
           </NavLink>
         </NavLi>
       </MainNav>
-    </Bar>
+    </StyledContainer>
   );
 }
