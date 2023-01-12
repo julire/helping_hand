@@ -1,18 +1,19 @@
-import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
+import { StyledContainer, MainNav, NavLi, NavItem } from 'ui';
+import { Link } from 'react-router-dom';
 
 export function Navbar() {
   return (
     <StyledContainer variant="NavWrapper">
       <MainNav>
         <NavLi>
-          <NavLink href="/">
+          <Link to="/">
             <span className="material-symbols-outlined">home</span>
-          </NavLink>
+          </Link>
         </NavLi>
         <NavLi>
-          <NavLink href="/add-project">
+          <Link to="/add-project">
             <span className="material-symbols-outlined">add</span>
-          </NavLink>
+          </Link>
         </NavLi>
       </MainNav>
     </StyledContainer>

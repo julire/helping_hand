@@ -1,15 +1,5 @@
 import styled from 'styled-components';
 
-export const Bar = styled.nav`
-  position: sticky;
-  bottom: 0;
-  width: 100%;
-  font-size: 18px;
-  background-color: #e5e5e5;
-  padding: 10px;
-  margin: 10px;
-  border-radius: 5px;
-`;
 export const MainNav = styled.ul`
   list-style-type: none;
   display: flex;
@@ -19,7 +9,7 @@ export const NavLi = styled.li`
   text-align: center;
   margin: 15px auto;
 `;
-export const NavLink = styled.a`
+export const NavItem = styled.a`
   list-style-type: none;
   display: flex;
   flex-direction: column;

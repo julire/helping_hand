@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export { ProjectHeader, ProjectImg, ProjectTitle } from './StyledProject';
 export { CardHeading } from './StyledCard';
-export { MainNav, NavLi, NavLink } from './StyledNavbar';
+export { MainNav, NavLi, NavItem } from './StyledNavbar';
 export { StyledContainer } from './StyledContainer';
 export { StyledH1 } from './StyledH1';
 export { StyledH2 } from './StyledH2';

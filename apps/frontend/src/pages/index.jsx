@@ -21,6 +21,7 @@ export default function Home() {
 
   const listProjects = projects.map((project) => (
     <Card
+      id={project.id}
       projectImg={project.projectImg}
       title={project.title}
       description={project.description}
