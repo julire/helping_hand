@@ -11,12 +11,12 @@ function App() {
   return (
     <Router>
       <StyledContainer>
-        <Form />
         <header>
           <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
         </header>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/add-project" element={<Form />} />
         </Routes>
         <Navbar />
       </StyledContainer>
