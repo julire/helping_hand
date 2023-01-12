@@ -1,13 +1,15 @@
-import { ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
+import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
 
 export function ProjectContainer(props) {
   return (
-    <div className="project">
+    <StyledContainer variant="ProjectContainer">
       <ProjectHeader className="project--header">
         <ProjectImg className="project--image" src={props.projectImg} alt="" />
         <ProjectTitle className="project--title">{props.title}</ProjectTitle>
       </ProjectHeader>
-      <p className="project--description">{props.description}</p>
-    </div>
+      <StyledContainer variant="CardBody">
+        <p className="project--description">{props.description}</p>
+      </StyledContainer>
+    </StyledContainer>
   );
 }

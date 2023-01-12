@@ -28,19 +28,17 @@ function App() {
 
   return (
     <Router>
-      <StyledContainer>
-        <header>
-          <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
-        </header>
-        <StyledContainer variant="MainContent">
-          <Routes>
-            <Route path="/" exact element={<Home projects={projects} />} />
-            <Route path="/add-project" element={<Form />} />
-            <Route path="/project/:id" element={<Project />} />
-          </Routes>
-        </StyledContainer>
-        <Navbar />
+      <header>
+        <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
+      </header>
+      <StyledContainer variant="MainContent">
+        <Routes>
+          <Route path="/" exact element={<Home projects={projects} />} />
+          <Route path="/add-project" element={<Form />} />
+          <Route path="/project/:id" element={<Project />} />
+        </Routes>
       </StyledContainer>
+      <Navbar />
     </Router>
   );
 }
