@@ -11,6 +11,11 @@ export const StyledContainer = styled('div')(
   },
   variant({
     variants: {
+      MainContent: {
+        display: 'grid',
+        minHeight: '100vh',
+        gridTemplateRows: 'auto 1fr auto',
+      },
       CardContainer: {
         overflow: 'hidden',
         padding: '0 0 32px',
@@ -21,6 +26,8 @@ export const StyledContainer = styled('div')(
         borderRadius: '5px',
       },
       NavWrapper: {
+        position: 'sticky',
+        bottom: '0',
         display: 'block',
         width: '100%',
         fontSize: '18px',

@@ -15,11 +15,13 @@ function App() {
         <header>
           <StyledH1 variant="AppTitle">Helping Hand</StyledH1>
         </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/add-project" element={<Form />} />
-          <Route path="project" element={<Project />} />
-        </Routes>
+        <StyledContainer variant="MainContent">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/add-project" element={<Form />} />
+            <Route path="project" element={<Project />} />
+          </Routes>
+        </StyledContainer>
         <Navbar />
       </StyledContainer>
     </Router>
