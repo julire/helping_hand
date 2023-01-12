@@ -5,6 +5,7 @@ import Home from './pages';
 import { Navbar } from './components/Navbar';
 import { StyledContainer } from 'ui';
 import { StyledH1 } from 'ui';
+import { Form } from './pages/Form';
 
 function App() {
   return (
