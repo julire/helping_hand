@@ -1,14 +1,14 @@
 import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
 
-export function ProjectContainer(props) {
+export function ProjectContainer({ projectImg, title, description }) {
   return (
     <StyledContainer variant="ProjectContainer">
-      <ProjectHeader className="project--header">
-        <ProjectImg className="project--image" src={props.projectImg} alt="" />
-        <ProjectTitle className="project--title">{props.title}</ProjectTitle>
+      <ProjectHeader>
+        <ProjectImg src={projectImg} alt="" />
+        <ProjectTitle>{title}</ProjectTitle>
       </ProjectHeader>
       <StyledContainer variant="CardBody">
-        <p className="project--description">{props.description}</p>
+        <p className="project--description">{description}</p>
       </StyledContainer>
     </StyledContainer>
   );

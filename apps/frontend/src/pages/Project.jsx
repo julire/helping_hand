@@ -1,22 +1,29 @@
 import React from 'react';
+import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
+
 import { ProjectContainer } from '../components/ProjectContainer';
+import { useParams } from 'react-router-dom';
 
-export default function Project() {
-  const project = {
-    id: 1,
-    projectImg:
-      'https://www.doctorswithoutborders.org/sites/default/files/MSF163911%28High%29_0.jpg',
-    title: 'Project 1',
-    description: 'This is the description of project 1',
-  };
-
+export default function Project(props) {
+  let { id } = useParams();
+  console.log({ id }, props);
   return (
     <section>
-      <ProjectContainer
-        projectImg={project.projectImg}
-        title={project.title}
-        description={project.description}
-      />
+      {/* <ProjectContainer
+        id={id}
+        // projectImg={projectImg}
+        // title={title}
+        // description={description}
+      /> */}
+      <StyledContainer variant="ProjectContainer">
+        <ProjectHeader>
+          <ProjectImg src={props.projectImg} alt="" />
+          <ProjectTitle>{props.title}</ProjectTitle>
+        </ProjectHeader>
+        <StyledContainer variant="CardBody">
+          <p className="project--description">{props.description}</p>
+        </StyledContainer>
+      </StyledContainer>
     </section>
   );
 }

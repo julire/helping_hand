@@ -7,25 +7,9 @@ import { Navbar } from './components/Navbar';
 import { StyledContainer } from 'ui';
 import { StyledH1 } from 'ui';
 import { Form } from './pages/Form';
+import Projects from './db.json';
 
 function App() {
-  const projects = [
-    {
-      id: 1,
-      projectImg:
-        'https://www.doctorswithoutborders.org/sites/default/files/MSF163911%28High%29_0.jpg',
-      title: 'Project 1',
-      description: 'This is the description of project 1',
-    },
-    {
-      id: 2,
-      projectImg:
-        'https://www.greenpeace.org/static/planet4-eastasia-stateless/2016/06/57ad1ec0-gp02d1n_web_size_with_credit_line.jpg',
-      title: 'Project 2',
-      description: 'This is the description of project 2',
-    },
-  ];
-
   return (
     <Router>
       <header>
@@ -33,7 +17,7 @@ function App() {
       </header>
       <StyledContainer variant="MainContent">
         <Routes>
-          <Route path="/" exact element={<Home projects={projects} />} />
+          <Route path="/" exact element={<Home projects={Projects} />} />
           <Route path="/add-project" element={<Form />} />
           <Route path="/project/:id" element={<Project />} />
         </Routes>
