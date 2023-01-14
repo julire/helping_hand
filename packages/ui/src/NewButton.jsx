@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export const CounterButton = () => {
+export const NewButton = () => {
   const [count, setCount] = React.useState(0);
   return (
     <div
@@ -12,7 +12,7 @@ export const CounterButton = () => {
       }}
     >
       <p style={{ margin: "0 0 1.5rem 0" }}>
-        This tsx component is from{" "}
+        This is jsx component is also from {" "}
         <code
           style={{
             padding: "0.2rem 0.3rem",
@@ -26,7 +26,7 @@ export const CounterButton = () => {
       <div>
         <button
           style={{
-            background: "black",
+            background: "red",
             color: "white",
             border: "none",
             padding: "0.5rem 1rem",

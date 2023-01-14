@@ -1,10 +1,10 @@
 const { MongoClient } = require("mongodb");
 
 // Replace the following with your Atlas connection string                                                                                                                                        
-const url = "mongodb+srv://helpingHand:X26igJL9@clusterhelpinghand.3kaeqwy.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://helping_hand:X26igJL9@clusterhelpinghand.c1myh2s.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url);
  // The database to use
-const dbName = "sample_mflix";
+const dbName = "project";
 
 async function run() {
     try {
@@ -15,15 +15,15 @@ async function run() {
 
          const db = client.db(dbName);
 
-         // Use the collection "people"
+         // Use the collection "project_details"
 
-         const col = db.collection("users");
+         const col = db.collection("project_details");
 
          // Construct a document                                                                                                                                                              
 
          const doc = {
              //"name": { "first": "Alan", "last": "Turing" },
-             "name": "amanpreet"
+             "title": "help amanpreet",
          }
 
          // Insert a single document, wait for promise so we can read it back

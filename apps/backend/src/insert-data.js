@@ -1,10 +1,10 @@
 const { MongoClient } = require("mongodb");
 
 // Replace the following with your Atlas connection string                                                                                                                                        
-const url = "mongodb+srv://helpingHand:X26igJL9@clusterhelpinghand.3kaeqwy.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://helping_hand:X26igJL9@clusterhelpinghand.c1myh2s.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(url);
  // The database to use
-const dbName = "sample_mflix";
+const dbName = "project";
 
 async function run() {
     try {
@@ -17,19 +17,19 @@ async function run() {
 
          // Use the collection "people"
 
-         const col = db.collection("users");
+         const col = db.collection("project_details");
 
          // Construct a document                                                                                                                                                              
 
-         let personDocument = {
+         let doc = {
 
              //"name": { "first": "Alan", "last": "Turing" },
 
-             "name": "amanpreet",
+             "title": "help amanpreet",
+             "description": "create a project on behalf of amanpreet",
+             "image_url":"amanImage"
              //"birth": new Date(1912, 5, 23), // May 23, 1912                                                                                                                                 
-             "email": "aman@test.com",
              //"death": new Date(1954, 5, 7),  // May 7, 1954                                                                                                                                  
-             "password":"abcdefg"
              //"contribs": [ "Turing machine", "Turing test", "Turingery" ],
 
              //"views": 1250000
@@ -38,7 +38,7 @@ async function run() {
 
          // Insert a single document, wait for promise so we can read it back
 
-         const p = await col.insertOne(personDocument);
+         const p = await col.insertOne(doc);
 
          // Find one document
 
