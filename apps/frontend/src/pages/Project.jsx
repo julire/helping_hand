@@ -3,27 +3,20 @@ import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
 
 import { ProjectContainer } from '../components/ProjectContainer';
 import { useParams } from 'react-router-dom';
+import Projects from '../db.json';
 
 export default function Project(props) {
   let { id } = useParams();
-  console.log({ id }, props);
+
+  console.log(props);
   return (
     <section>
-      {/* <ProjectContainer
-        id={id}
-        // projectImg={projectImg}
-        // title={title}
-        // description={description}
-      /> */}
-      <StyledContainer variant="ProjectContainer">
-        <ProjectHeader>
-          <ProjectImg src={props.projectImg} alt="" />
-          <ProjectTitle>{props.title}</ProjectTitle>
-        </ProjectHeader>
-        <StyledContainer variant="CardBody">
-          <p className="project--description">{props.description}</p>
-        </StyledContainer>
-      </StyledContainer>
+      <ProjectContainer
+        id={props.id}
+        projectImg={props.projectImg}
+        title={props.title}
+        description={props.description}
+      />
     </section>
   );
 }

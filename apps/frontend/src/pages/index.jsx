@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom';
 
 export default function Home({ ...props }) {
   let projects = props.projects;
-  console.log({ projects });
   const listProjects = projects.map((project) => (
     <li key={project.id}>
-      <Link to={`/project/${project.id}`}>
+      <Link to={`/project/${project.id}`} project={project}>
         <Card
           id={project.id}
           projectImg={project.projectImg}
