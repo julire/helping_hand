@@ -3,22 +3,23 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import Project from './pages/Project';
+import Projects from './pages/Projects';
 import { Navbar } from './components/Navbar';
 import { StyledContainer } from 'ui';
 import { StyledH1 } from 'ui';
 import { Form } from './pages/Form';
-import Projects from './db.json';
+import ProjectsData from './db.json';
 import axios from 'axios';
 
 function App() {
-  const [data, setData] = useState(Projects);
+  const [data, setData] = useState(ProjectsData);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5001/project`);
+        const response = await axios.get(`http://localhost:5001/projects`);
         setData(response.data.data);
         setError(null);
       } catch (err) {
@@ -30,6 +31,7 @@ function App() {
     };
     getData();
   }, []);
+
   return (
     <Router>
       <header>
@@ -37,9 +39,9 @@ function App() {
       </header>
       <StyledContainer variant="MainContent">
         <Routes>
-          <Route path="/" exact element={<Home projects={data} />} />
+          <Route path="/" exact element={<Projects projects={data} />} />
           <Route path="/add-project" element={<Form />} />
-          <Route path="/project/:id" element={<Project />} />
+          <Route path="/projects/:id" element={<Project />} />
         </Routes>
       </StyledContainer>
       <Navbar />
