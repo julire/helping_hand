@@ -13,8 +13,8 @@ export default function Project(props) {
     <section>
       <ProjectContainer
         id={props.id}
-        projectImg={props.projectImg}
-        title={props.title}
+        projectImg={props.imageUrl}
+        title={props.projectName}
         description={props.description}
       />
     </section>

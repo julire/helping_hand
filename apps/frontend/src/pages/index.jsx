@@ -1,20 +1,24 @@
 import React from 'react';
 import { Card } from '../components/Card';
 import { Link } from 'react-router-dom';
+import { StyledContainer, StyledH1, StyledH2 } from 'ui';
 
 export default function Home({ ...props }) {
   let projects = props.projects;
-  const listProjects = projects.map((project) => (
-    <li key={project.id}>
-      <Link to={`/project/${project.id}`} project={project}>
-        <Card
-          id={project.id}
-          projectImg={project.projectImg}
-          title={project.title}
-          description={project.description}
-        />
-      </Link>
-    </li>
-  ));
-  return <section>{listProjects}</section>;
+  return (
+    <ul>
+      {projects.map(({ id, imageUrl, projectName, description }) => (
+        <li key={id}>
+          <Link to={id}>
+            <Card
+              id={id}
+              imageUrl={imageUrl}
+              projectName={projectName}
+              description={description}
+            />
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
 }

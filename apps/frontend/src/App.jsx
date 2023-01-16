@@ -8,35 +8,28 @@ import { StyledContainer } from 'ui';
 import { StyledH1 } from 'ui';
 import { Form } from './pages/Form';
 import Projects from './db.json';
+import axios from 'axios';
 
 function App() {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState(Projects);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:5001/project`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `This is an HTTP error: The status response is ${response.status}`
-          );
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setData(data);
+    const getData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:5001/project`);
+        setData(response.data.data);
         setError(null);
-      })
-      .catch((err) => {
+      } catch (err) {
         setError(err.message);
         setData(null);
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+    getData();
   }, []);
-
   return (
     <Router>
       <header>
@@ -44,7 +37,7 @@ function App() {
       </header>
       <StyledContainer variant="MainContent">
         <Routes>
-          <Route path="/" exact element={<Home projects={Projects} />} />
+          <Route path="/" exact element={<Home projects={data} />} />
           <Route path="/add-project" element={<Form />} />
           <Route path="/project/:id" element={<Project />} />
         </Routes>

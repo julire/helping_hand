@@ -1,13 +1,15 @@
 import { StyledContainer, StyledH1, StyledH2 } from 'ui';
 import { Link } from 'react-router-dom';
 
-export function Card({ projectImg, title, description }) {
+export function Card({ imageUrl, projectName, description }) {
   return (
     <StyledContainer variant="CardContainer">
-      <img src={projectImg} alt="" />
+      {console.log(projectName)}
+
+      <img src={imageUrl} alt="" />
       <div>
         <StyledContainer variant="CardHeader">
-          <StyledH2>{title}</StyledH2>
+          <StyledH2>{projectName}</StyledH2>
         </StyledContainer>
         <StyledContainer variant="CardBody">{description}</StyledContainer>
       </div>
