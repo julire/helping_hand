@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { StyledContainer, StyledH1, StyledH2 } from 'ui';
 
 export default function Projects({ ...props }) {
-  console.log(props);
   let projects = props.projects;
   return (
     <ul>
