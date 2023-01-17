@@ -1,20 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
+import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
 import { useParams } from 'react-router-dom';
 
 export default function Project(props) {
-  let { id } = useParams();
+  const [project, setProject] = useState({
+    projectName: '',
+    description: '',
+    imageUrl: '',
+  });
 
-  console.log(props);
+  let { id } = useParams();
+  useEffect(() => {
+    getProject();
+  }, []);
+
+  const getProject = () => {
+    ProjectDataService.get(id)
+      .then((response) => {
+        setProject(response.data.data[0]);
+      })
+      .catch((e) => console.log(e));
+  };
+
   return (
     <section>
       <ProjectContainer
-        id={props.id}
-        projectImg={props.imageUrl}
-        title={props.projectName}
-        description={props.description}
+        id={project.id}
+        projectImg={project.imageUrl}
+        title={project.projectName}
+        description={project.description}
       />
     </section>
   );

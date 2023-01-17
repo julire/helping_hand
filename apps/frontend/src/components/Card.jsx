@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 export function Card({ id, imageUrl, projectName, description }) {
   return (
     <StyledContainer variant="CardContainer">
-      {console.log(id)}
-
       <Link to={`projects/${id}`}>
         <img src={imageUrl} alt="" />
         <div>

@@ -27,18 +27,23 @@ export const createServer = () => {
     .use(urlencoded({ extended: true }))
     .use(json())
     .use(cors())
-    .get('/message/:name', (req, res) => {
-      return res.json({ message: `hello ${req.params.name}` });
-    })
-    .get('/healthz', (req, res) => {
-      return res.json({ ok: true });
-    })
+
     .get('/projects', (req, res) => {
       const query = req.query;
       Project.find(query).then((projects) => {
         res.json({
           confirmation: 'success',
           data: projects,
+        });
+      }).catch;
+    })
+
+    .get('/projects/:id', (req, res) => {
+      const id = req.params.id;
+      Project.find({ _id: id }).then((project) => {
+        res.json({
+          confirmation: 'success',
+          data: project,
         });
       }).catch;
     });

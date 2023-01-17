@@ -20,15 +20,17 @@ export default function Projects() {
       .catch((e) => console.log(e));
   };
   return (
-    <>
+    <ul>
       {projects.map((project) => (
-        <Card
-          id={project._id}
-          imageUrl={project.imageUrl}
-          projectName={project.projectName}
-          description={project.description}
-        />
+        <li key={project._id}>
+          <Card
+            id={project._id}
+            imageUrl={project.imageUrl}
+            projectName={project.projectName}
+            description={project.description}
+          />
+        </li>
       ))}
-    </>
+    </ul>
   );
 }

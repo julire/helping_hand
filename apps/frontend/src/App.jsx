@@ -18,10 +18,7 @@ function App() {
         <Routes>
           <Route path="/" exact element={<Projects />} />
           <Route path="/add-project" element={<Form />} />
-          <Route
-            path="/projects/:id"
-            render={(props) => <Project {...props} />}
-          ></Route>
+          <Route path="/projects/:id" element={<Project />} />
         </Routes>
       </StyledContainer>
       <Navbar />
