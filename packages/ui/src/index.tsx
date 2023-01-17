@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-export { ProjectHeader, ProjectImg, ProjectTitle } from './StyledProject';
+export { ProjectHeader } from './StyledProject';
 export { CardHeading } from './StyledCard';
 export { MainNav, NavLi, NavItem } from './StyledNavbar';
 export { StyledContainer } from './StyledContainer';
@@ -9,3 +9,4 @@ export { StyledH2 } from './StyledH2';
 export { StyledForm } from './StyledForm';
 export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
+export { StyledImg } from './StyledImg';

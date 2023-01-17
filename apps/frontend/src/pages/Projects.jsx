@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card } from '../components/Card';
-import { Link } from 'react-router-dom';
 import ProjectDataService from '../services/projects';
-
-import { StyledContainer, StyledH1, StyledH2 } from 'ui';
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);

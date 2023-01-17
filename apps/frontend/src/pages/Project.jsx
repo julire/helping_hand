@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { StyledContainer, ProjectHeader, ProjectImg, ProjectTitle } from 'ui';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';

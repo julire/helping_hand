@@ -20,6 +20,14 @@ export const StyledContainer = styled('div')(
         backgroundColor: 'light-blue',
         display: 'block',
       },
+      ProjectHeader: {
+        display: 'block',
+        position: 'relative',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        marginTop: '-80px',
+        marginBottom: '50px',
+        zIndex: '999',
+      },
       CardContainer: {
         overflow: 'hidden',
         padding: '0 0 32px',
