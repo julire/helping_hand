@@ -1,4 +1,4 @@
-import { StyledContainer, ProjectHeader, StyledImg, StyledH1 } from 'ui';
+import { StyledContainer, StyledImg, StyledH1 } from 'ui';
 
 export function ProjectContainer({ projectImg, title, description }) {
   return (
