@@ -1,31 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages';
 import Project from './pages/Project';
 import Projects from './pages/Projects';
 import { Navbar } from './components/Navbar';
 import { StyledContainer } from 'ui';
 import { StyledH1 } from 'ui';
 import { Form } from './pages/Form';
-import ProjectsData from './db.json';
-import ProjectDataService from './services/projects';
 
 function App() {
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    retrieveProjects();
-  }, []);
-
-  const retrieveProjects = () => {
-    ProjectDataService.getAll()
-      .then((response) => {
-        setProjects(response.data.data);
-      })
-      .catch((e) => console.log(e));
-  };
-
   return (
     <Router>
       <header>
@@ -33,7 +16,7 @@ function App() {
       </header>
       <StyledContainer variant="MainContent">
         <Routes>
-          <Route path="/" exact element={<Projects projects={projects} />} />
+          <Route path="/" exact element={<Projects />} />
           <Route path="/add-project" element={<Form />} />
           <Route
             path="/projects/:id"
