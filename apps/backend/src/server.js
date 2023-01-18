@@ -36,16 +36,6 @@ export const createServer = () => {
           data: projects,
         });
       }).catch;
-    })
-
-    .get('/projects/:id', (req, res) => {
-      const id = req.params.id;
-      Project.find({ _id: id }).then((project) => {
-        res.json({
-          confirmation: 'success',
-          data: project,
-        });
-      }).catch;
     });
 
   return app;
