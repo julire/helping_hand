@@ -7,8 +7,9 @@ import { Server } from "http";
 
 const app = express();
 
-/*mongoose.set('strictQuery', false)
-mongoose.connect("mongodb+srv://helping_hand:X26igJL9@clusterhelpinghand.c1myh2s.mongodb.net/?retryWrites=true&w=majority", {
+//mongoose.set('strictQuery', false)
+//mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true,  useUnifiedTopology: true})
+/*mongoose.connect("mongodb+srv://helping_hand:X26igJL9@clusterhelpinghand.c1myh2s.mongodb.net/?retryWrites=true&w=majority", {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
@@ -19,7 +20,7 @@ mongoose.connect("mongodb+srv://helping_hand:X26igJL9@clusterhelpinghand.c1myh2s
 });
 */
 export const createServer = () => {
-  //const app = express();
+  const app = express();
   const {connectToDb , getDb} = require('./db')
   let db;
   //connection to db
