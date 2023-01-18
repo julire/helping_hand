@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Project, Projects } from './pages/';
+import { Project, Projects, Form } from './pages/';
 import { Navbar } from './components/';
 import { StyledContainer, StyledH1 } from 'ui';
-import { Form } from './pages/Form';
 
 function App() {
   return (
