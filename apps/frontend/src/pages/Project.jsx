@@ -4,7 +4,7 @@ import ProjectDataService from '../services/projects';
 import { ProjectContainer } from '../components/ProjectContainer';
 import { useParams } from 'react-router-dom';
 
-export default function Project(props) {
+export function Project(props) {
   const [project, setProject] = useState({
     projectName: '',
     description: '',

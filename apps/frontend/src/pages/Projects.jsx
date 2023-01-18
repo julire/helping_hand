@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Card } from '../components/Card';
 import ProjectDataService from '../services/projects';
 
-export default function Projects() {
+export function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
