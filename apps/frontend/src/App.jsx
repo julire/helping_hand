@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import { Navbar } from './components/Navbar';
-import { StyledContainer } from 'ui';
+import { StyledContainer, StyledButton } from 'ui';
 import { StyledH1 } from 'ui';
 import { Form } from './pages/Form';
 
