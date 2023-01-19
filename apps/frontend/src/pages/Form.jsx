@@ -1,4 +1,4 @@
-import { StyledForm, StyledInput, StyledLabel } from 'ui';
+import { StyledForm, StyledInput, StyledLabel, StyledButton } from 'ui';
 
 export function Form() {
   return (
@@ -20,7 +20,7 @@ export function Form() {
           <StyledInput type="text" />
         </StyledLabel>
 
-        <button type="submit">Submit</button>
+        <StyledButton type="submit">Submit</StyledButton>
       </StyledForm>
     </section>
   );
