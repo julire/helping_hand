@@ -10,6 +10,10 @@ export const GlobalStyle = createGlobalStyle`
   }
 `;
 
+export const color = (second) => {
+  third;
+};
+
 // Primary (Yellow) #f7b70d
 // Primary dark (Orange) #F18405
 // Secondary (Green) #7FB432
