@@ -1,4 +1,4 @@
-import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
+import { MainNav, NavLi, NavLink, StyledContainer } from '../index';
 
 export function Navbar() {
   return (

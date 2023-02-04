@@ -10,3 +10,5 @@ export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
 export { StyledButton } from './StyledButton';
 export { theme } from './globalStyles';
+export { Card } from './components/Card';
+export { Navbar } from './components/Navbar';
