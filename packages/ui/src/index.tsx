@@ -12,3 +12,4 @@ export { StyledButton } from './StyledButton';
 export { theme } from './globalStyles';
 export { Card } from './components/Card';
 export { Navbar } from './components/Navbar';
+export { Form } from './components/Form';
