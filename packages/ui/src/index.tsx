@@ -9,4 +9,4 @@ export { StyledForm } from './StyledForm';
 export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
 export { StyledButton } from './StyledButton';
-export { GlobalStyle } from './globalStyles';
+export { theme } from './globalStyles';

@@ -1,19 +1,24 @@
-import { createGlobalStyle } from 'styled-components';
-
-export const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 75%, rgba(247,183,13,1) 100%);
-    font-family: Open-Sans, Helvetica, Sans-Serif;
-  }
-`;
-
-export const color = (second) => {
-  third;
+export const theme = {
+  text: '#000',
+  background: '#fff',
+  primary: '#E38933',
+  secondary: 'rgba(237, 185, 66, 0.6)',
+  gray: '#eee',
+  lightgray: '#fafafa',
+  modes: {
+    dark: {
+      text: '#fff',
+      background: '#000',
+      primary: '#0cf',
+      secondary: '#f0e',
+      gray: '#222',
+      lightgray: '#111',
+    },
+  },
 };
 
 // Primary (Yellow) #f7b70d
 // Primary dark (Orange) #F18405
 // Secondary (Green) #7FB432
+// rgba(237, 185, 66, 0.6);
+// #E38933;
