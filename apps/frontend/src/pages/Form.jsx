@@ -1,6 +1,7 @@
 import { StyledForm, StyledInput, StyledLabel } from "ui";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export function Form() {
   const [titleValue, setTitleValue] = useState("");
@@ -11,6 +12,20 @@ export function Form() {
 
   function handleSubmit(event) {
     event.preventDefault();
+
+    fetch(
+      "https://ng-course-recipe-book-a3fea-default-rtdb.europe-west1.firebasedatabase.app/helping-hand.json",
+      {
+        method: "POST",
+        body: JSON.stringify({
+          titleValue,
+          descriptionValue,
+          imagePathValue,
+        }),
+      }
+    );
+
+    console.log(titleValue, descriptionValue, imagePathValue);
 
     navigate("/");
   }
