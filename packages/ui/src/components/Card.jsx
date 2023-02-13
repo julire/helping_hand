@@ -3,7 +3,7 @@ import { StyledH2 } from '../StyledH2';
 
 export function Card(props) {
   return (
-    <StyledContainer variant="CardContainer">
+    <StyledContainer bg={props.primary} variant="CardContainer">
       <img src={props.projectImg} alt="" />
       <div>
         <StyledContainer variant="CardHeader">

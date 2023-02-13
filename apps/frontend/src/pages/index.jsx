@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card } from 'ui';
 
-export default function Home() {
+export default function Home(props) {
+  console.log(props);
   const projects = [
     {
       projectImg:

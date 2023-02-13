@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import variant from '@styled-system/variant';
-import { theme } from './globalStyles';
 
 export const StyledContainer = styled('div')(
   {
@@ -9,6 +8,7 @@ export const StyledContainer = styled('div')(
     justifyContent: 'center',
     alignItems: 'center',
     padding: '1rem',
+    // backgroundColor: (theme) => theme.colors.secondary,
   },
   variant({
     variants: {
@@ -20,7 +20,6 @@ export const StyledContainer = styled('div')(
         boxShadow:
           '0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08)',
         borderRadius: '5px',
-        backgroundColor: theme.secondary,
       },
       NavWrapper: {
         display: 'block',

@@ -1,19 +1,11 @@
 export const theme = {
-  text: '#000',
-  background: '#fff',
-  primary: '#E38933',
-  secondary: 'rgba(237, 185, 66, 0.6)',
-  gray: '#eee',
-  lightgray: '#fafafa',
-  modes: {
-    dark: {
-      text: '#fff',
-      background: '#000',
-      primary: '#0cf',
-      secondary: '#f0e',
-      gray: '#222',
-      lightgray: '#111',
-    },
+  colors: {
+    text: '#000',
+    background: '#fff',
+    primary: '#E38933',
+    secondary: 'rgba(237, 185, 66, 0.6)',
+    gray: '#eee',
+    lightgray: '#fafafa',
   },
 };
 
