@@ -1,7 +1,6 @@
-import * as React from "react";
+import * as React from 'react';
 //export { NewTabLink } from "./NewTabLink";
-export { CounterButton } from "./CounterButton";
-export { NewButton } from "./NewButton"
+export { NewButton } from './NewButton';
 export { CardHeading } from './StyledCard';
 export { StyledNav, MainNav, NavLi, NavLink } from './StyledNavbar';
 export { StyledContainer } from './StyledContainer';
