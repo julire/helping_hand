@@ -1,5 +1,4 @@
-import { StyledContainer } from '../StyledContainer';
-import { StyledH2 } from '../StyledH2';
+import { StyledContainer, StyledH2 } from '../index';
 
 export function Card(props) {
   return (

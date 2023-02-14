@@ -1,10 +1,10 @@
 import * as React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import { StyledContainer, StyledH1, theme, Navbar } from 'ui';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import { CreateProject } from './pages/CreateProject';
-import { ThemeProvider } from 'styled-components';
 
 function App() {
   return (
