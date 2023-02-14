@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { StyledButton } from 'ui';
 
 export function Project(props) {
   const [project, setProject] = useState({
@@ -24,8 +25,16 @@ export function Project(props) {
       .catch((e) => console.log(e));
   };
 
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate(-1);
+  };
+
   return (
     <section>
+      <StyledButton onClick={goBack} variant="BackButton">
+        <span className="material-symbols-outlined">arrow_back</span>
+      </StyledButton>
       <ProjectContainer
         id={project.id}
         projectImg={project.imageUrl}
