@@ -3,6 +3,7 @@ import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
 import { useParams } from 'react-router-dom';
+import { StyledButton } from 'ui';
 
 export function Project(props) {
   const [project, setProject] = useState({
@@ -26,6 +27,7 @@ export function Project(props) {
 
   return (
     <section>
+      <StyledButton>Edit</StyledButton>
       <ProjectContainer
         id={project.id}
         projectImg={project.imageUrl}
