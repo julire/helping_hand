@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+export { NewButton } from './NewButton';
 export { CardHeading } from './StyledCard';
 export { MainNav, NavLi, NavItem } from './StyledNavbar';
 export { StyledContainer } from './StyledContainer';
@@ -9,3 +9,4 @@ export { StyledForm } from './StyledForm';
 export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
 export { StyledImg } from './StyledImg';
+export { StyledButton } from './StyledButton';

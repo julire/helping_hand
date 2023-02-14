@@ -1,4 +1,4 @@
-import { StyledForm, StyledInput, StyledLabel } from 'ui';
+import { StyledForm, StyledInput, StyledLabel, StyledButton } from 'ui';
 
 export function Form() {
   return (

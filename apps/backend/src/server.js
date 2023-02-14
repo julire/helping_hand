@@ -2,24 +2,27 @@ import { json, urlencoded } from 'body-parser';
 import express from 'express';
 import morgan from 'morgan';
 import cors from 'cors';
-import mongoose from 'mongoose';
-
-mongoose.set('strictQuery', false);
-mongoose
-  .connect(process.env.DATABASE_URL, {
-    useNewUrlParser: true,
-  })
-  .then(() => {
-    console.log('Successfully connected to the database');
-  })
-  .catch((err) => {
-    console.log('Could not connect to the database. Error...', err);
-    process.exit();
-  });
+import {
+  createProject,
+  deleteProject,
+  getProjectById,
+  getProjects,
+  updateProject,
+} from './api/projects.route.js';
 
 export const createServer = () => {
   const app = express();
-  const Project = require('./models/Project');
+
+  const { connectToDb, getDb } = require('./db.js');
+  let db;
+  //connection to db
+  connectToDb((err) => {
+    if (!err) {
+      console.log('app listening on port 5001');
+      db = getDb();
+      console.log(db);
+    }
+  });
 
   app
     .disable('x-powered-by')
@@ -27,24 +30,21 @@ export const createServer = () => {
     .use(urlencoded({ extended: true }))
     .use(json())
     .use(cors())
-    .get('/projects', (req, res) => {
-      const query = req.query;
-      Project.find(query).then((projects) => {
-        res.json({
-          confirmation: 'success',
-          data: projects,
-        });
-      }).catch;
-    })
-    .get('/projects/:id', (req, res) => {
-      const id = req.params.id;
-      Project.find({ _id: id }).then((project) => {
-        res.json({
-          confirmation: 'success',
-          data: project,
-        });
-      }).catch;
-    });
 
+    //  Routes
+
+    .get('/projects', getProjects)
+
+    .get('/projects/:id', getProjectById)
+
+    .post('/projects', createProject)
+
+    .put('/projects/:id', updateProject)
+
+    .delete('/projects/:id', deleteProject)
+
+    .get('/healthz', (req, res) => {
+      return res.json({ ok: true });
+    });
   return app;
 };
