@@ -2,11 +2,12 @@ import React, { useState, useEffect } from 'react';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { useParams } from 'react-router-dom';
+import { redirect, useNavigate, useParams } from 'react-router-dom';
 import { StyledButton } from 'ui';
-import axios from 'axios';
 
 export function Project(props) {
+  const navigate = useNavigate();
+
   const [project, setProject] = useState({
     projectName: '',
     description: '',
@@ -30,16 +31,14 @@ export function Project(props) {
     ProjectDataService.delete(id)
       .then((response) => {
         console.log(response);
+        navigate('/');
       })
       .catch((e) => console.log(e));
   };
 
   return (
     <section>
-      <StyledButton variant="IconButton">
-        <span className="material-symbols-outlined">arrow_back</span>
-      </StyledButton>
-      <StyledButton onClick={deleteProject(id)} variant="IconButton">
+      <StyledButton onClick={() => deleteProject(id)} variant="IconButton">
         <span className="material-symbols-outlined">delete</span>
       </StyledButton>
       <ProjectContainer
