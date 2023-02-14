@@ -7,10 +7,27 @@ export const StyledContainer = styled('div')(
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '1rem',
+    padding: '1rem 0',
   },
   variant({
     variants: {
+      MainContent: {
+        display: 'grid',
+        minHeight: '100vh',
+        gridTemplateRows: 'auto 1fr auto',
+      },
+      ProjectContainer: {
+        backgroundColor: 'light-blue',
+        display: 'block',
+      },
+      ProjectHeader: {
+        display: 'block',
+        position: 'relative',
+        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        marginTop: '-80px',
+        marginBottom: '50px',
+        zIndex: '999',
+      },
       CardContainer: {
         overflow: 'hidden',
         padding: '0 0 32px',
@@ -21,6 +38,8 @@ export const StyledContainer = styled('div')(
         borderRadius: '5px',
       },
       NavWrapper: {
+        position: 'sticky',
+        bottom: '0',
         display: 'block',
         width: '100%',
         fontSize: '18px',
@@ -30,8 +49,10 @@ export const StyledContainer = styled('div')(
         borderRadius: '5px',
       },
       CardBody: {
+        display: 'block',
         paddingLeft: '32px',
         paddingRight: '32px',
+        justifyContent: 'start',
       },
       CardHeader: {
         padding: '32px 0',
