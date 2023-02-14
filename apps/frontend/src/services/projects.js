@@ -9,8 +9,8 @@ class ProjectDataService {
     return axios.get(`http://localhost:5001/projects/${id}`);
   }
 
-  updateProject(id) {
-    return axios.put(`http://localhost:5001/projects/${id}`);
+  updateProject(id, project) {
+    return axios.put(`http://localhost:5001/projects/${id}`, project);
   }
 }
 
