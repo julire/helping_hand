@@ -1,47 +1,50 @@
-import { json, urlencoded } from "body-parser";
-import express from "express";
-import morgan from "morgan";
-import cors from "cors";
-import mongoose from "mongoose";
-
-
-mongoose.set('strictQuery', false)
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true
-}).then(() => {
-  console.log("Successfully connected to the database");
-}).catch(err => {
-  console.log('Could not connect to the database. Error...', err);
-  process.exit();
-});
+import { json, urlencoded } from 'body-parser';
+import express from 'express';
+import morgan from 'morgan';
+import cors from 'cors';
+import {
+  createProject,
+  deleteProject,
+  getProjectById,
+  getProjects,
+  updateProject,
+} from './api/projects.route.js';
 
 export const createServer = () => {
   const app = express();
-  const Project = require('../models/Project')
+
+  const { connectToDb, getDb } = require('./db.js');
+  let db;
+  //connection to db
+  connectToDb((err) => {
+    if (!err) {
+      console.log('app listening on port 5001');
+      db = getDb();
+      console.log(db);
+    }
+  });
 
   app
-    .disable("x-powered-by")
-    .use(morgan("dev"))
+    .disable('x-powered-by')
+    .use(morgan('dev'))
     .use(urlencoded({ extended: true }))
     .use(json())
     .use(cors())
-    .get("/message/:name", (req, res) => {
-      return res.json({ message: `hello ${req.params.name}` });
-    })
-    .get("/healthz", (req, res) => {
-      return res.json({ ok: true });
-    })
-    .get('/project', (req, res) => {
-      const query = req.query
-      Project.find(query)
-      .then(projects => {
-        res.json({
-          confirmation: 'success',
-          data: projects
-        })
-      })
-      .catch
-    });
 
+    //  Routes
+
+    .get('/projects', getProjects)
+
+    .get('/projects/:id', getProjectById)
+
+    .post('/projects', createProject)
+
+    .put('/projects/:id', updateProject)
+
+    .delete('/projects/:id', deleteProject)
+
+    .get('/healthz', (req, res) => {
+      return res.json({ ok: true });
+    });
   return app;
 };
