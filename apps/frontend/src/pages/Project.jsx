@@ -38,69 +38,6 @@ export function Project(props) {
     setUpdateState(id);
   }
 
-  // function updateProject(event) {
-  //   event.preventDefault();
-  //   ProjectDataService.updateProject(id, tempProject)
-  //     .then((response) => {
-  //       setProject(response.data.data[0]);
-  //       setChanged(false);
-  //     })
-  //     .catch((event) => {
-  //       console.log(event);
-  //     });
-  //   setUpdateState(-1);
-  // }
-
-  // const EditForm = () => {
-  //   return (
-  //     <StyledForm onSubmit={updateProject}>
-  //       <StyledLabel>
-  //         Project Title
-  //         <StyledInput
-  //           type="text"
-  //           value={tempProject.projectName}
-  //           onChange={(event) => {
-  //             setChanged(true);
-  //             setTempProject({
-  //               ...tempProject,
-  //               projectName: event.target.value,
-  //             });
-  //           }}
-  //         />
-  //       </StyledLabel>
-
-  //       <StyledLabel>
-  //         Description
-  //         <StyledInput
-  //           type="text"
-  //           value={tempProject.description}
-  //           onChange={(event) => {
-  //             setChanged(true);
-  //             setTempProject({
-  //               ...tempProject,
-  //               description: event.target.value,
-  //             });
-  //           }}
-  //         />
-  //       </StyledLabel>
-
-  //       <StyledLabel>
-  //         Image Url
-  //         <StyledInput
-  //           type="text"
-  //           value={tempProject.imageUrl}
-  //           onChange={(event) => {
-  //             setChanged(true);
-  //             setTempProject({ ...tempProject, imageUrl: event.target.value });
-  //           }}
-  //         />
-  //       </StyledLabel>
-
-  //       <button type="submit">Submit</button>
-  //     </StyledForm>
-  //   );
-  // };
-
   return (
     <section>
       <ProjectContainer

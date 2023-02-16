@@ -14,16 +14,16 @@ export const EditForm = (props) => {
 
   let { id } = useParams();
 
-  function updateProject(e) {
-    e.preventDefault();
+  function updateProject(event) {
+    event.preventDefault();
     ProjectDataService.updateProject(id, tempProject)
       .then((response) => {
         console.log(response.data);
         setProject(response.data[0]);
         setChanged(false);
       })
-      .catch((e) => {
-        console.log(e);
+      .catch((event) => {
+        console.log(event);
       });
   }
 
@@ -34,9 +34,9 @@ export const EditForm = (props) => {
         <StyledInput
           type="text"
           value={tempProject.projectName}
-          onChange={(e) => {
+          onChange={(event) => {
             setChanged(true);
-            setTempProject({ ...tempProject, projectName: e.target.value });
+            setTempProject({ ...tempProject, projectName: event.target.value });
           }}
         />
       </StyledLabel>
@@ -46,9 +46,9 @@ export const EditForm = (props) => {
         <StyledInput
           type="text"
           value={tempProject.description}
-          onChange={(e) => {
+          onChange={(event) => {
             setChanged(true);
-            setTempProject({ ...tempProject, description: e.target.value });
+            setTempProject({ ...tempProject, description: event.target.value });
           }}
         />
       </StyledLabel>
@@ -58,9 +58,9 @@ export const EditForm = (props) => {
         <StyledInput
           type="text"
           value={tempProject.imageUrl}
-          onChange={(e) => {
+          onChange={(event) => {
             setChanged(true);
-            setTempProject({ ...tempProject, imageUrl: e.target.value });
+            setTempProject({ ...tempProject, imageUrl: event.target.value });
           }}
         />
       </StyledLabel>
