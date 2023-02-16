@@ -2,13 +2,11 @@ import React, { useState, useEffect } from 'react';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { StyledButton, StyledForm, StyledInput, StyledLabel } from 'ui';
 import { EditForm } from './EditForm';
 
-export function Project(props) {
-  const navigate = useNavigate();
-
+export function Project() {
   const [updateState, setUpdateState] = useState(-1);
 
   const [project, setProject] = useState({
@@ -16,8 +14,6 @@ export function Project(props) {
     description: '',
     imageUrl: '',
   });
-  const [tempProject, setTempProject] = useState();
-  const [changed, setChanged] = useState(false);
 
   let { id } = useParams();
 
@@ -29,7 +25,6 @@ export function Project(props) {
     ProjectDataService.get(id)
       .then((response) => {
         setProject(response.data.data[0]);
-        setTempProject(response.data.data[0]);
       })
       .catch((event) => console.log(event));
   };
@@ -47,7 +42,14 @@ export function Project(props) {
         description={project.description}
       />
       <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
-      {updateState === id ? <EditForm project={project} /> : null}
+      {updateState === id ? (
+        <>
+          <EditForm updateState={updateState} project={project} />
+          <StyledButton onClick={() => handleEditClick(-1)}>
+            Cancel
+          </StyledButton>
+        </>
+      ) : null}
     </section>
   );
 }
