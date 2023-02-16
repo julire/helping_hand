@@ -2,12 +2,13 @@ import React, { useState, useEffect } from 'react';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { Link, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { StyledButton, StyledForm, StyledInput, StyledLabel } from 'ui';
-import { Form } from './Form';
-import axios from 'axios';
+import { EditForm } from './EditForm';
 
 export function Project(props) {
+  const navigate = useNavigate();
+
   const [updateState, setUpdateState] = useState(-1);
 
   const [project, setProject] = useState({
@@ -30,69 +31,75 @@ export function Project(props) {
         setProject(response.data.data[0]);
         setTempProject(response.data.data[0]);
       })
-      .catch((e) => console.log(e));
+      .catch((event) => console.log(event));
   };
 
-  function handleEdit(id) {
+  function handleEditClick(id) {
     setUpdateState(id);
   }
 
-  function updateProject(e) {
-    e.preventDefault();
-    console.log(tempProject);
-    ProjectDataService.updateProject(id, tempProject)
-      .then((response) => {
-        setProject(response.data.data[0]);
-        setChanged(false);
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
+  // function updateProject(event) {
+  //   event.preventDefault();
+  //   ProjectDataService.updateProject(id, tempProject)
+  //     .then((response) => {
+  //       setProject(response.data.data[0]);
+  //       setChanged(false);
+  //     })
+  //     .catch((event) => {
+  //       console.log(event);
+  //     });
+  //   setUpdateState(-1);
+  // }
 
-  const EditForm = () => {
-    return (
-      <StyledForm onSubmit={updateProject}>
-        <StyledLabel>
-          Project Title
-          <StyledInput
-            type="text"
-            value={tempProject.projectName}
-            onChange={(e) => {
-              setChanged(true);
-              setTempProject({ ...tempProject, projectName: e.target.value });
-            }}
-          />
-        </StyledLabel>
+  // const EditForm = () => {
+  //   return (
+  //     <StyledForm onSubmit={updateProject}>
+  //       <StyledLabel>
+  //         Project Title
+  //         <StyledInput
+  //           type="text"
+  //           value={tempProject.projectName}
+  //           onChange={(event) => {
+  //             setChanged(true);
+  //             setTempProject({
+  //               ...tempProject,
+  //               projectName: event.target.value,
+  //             });
+  //           }}
+  //         />
+  //       </StyledLabel>
 
-        <StyledLabel>
-          Description
-          <StyledInput
-            type="text"
-            value={tempProject.description}
-            onChange={(e) => {
-              setChanged(true);
-              setTempProject({ ...tempProject, description: e.target.value });
-            }}
-          />
-        </StyledLabel>
+  //       <StyledLabel>
+  //         Description
+  //         <StyledInput
+  //           type="text"
+  //           value={tempProject.description}
+  //           onChange={(event) => {
+  //             setChanged(true);
+  //             setTempProject({
+  //               ...tempProject,
+  //               description: event.target.value,
+  //             });
+  //           }}
+  //         />
+  //       </StyledLabel>
 
-        <StyledLabel>
-          Image Url
-          <StyledInput
-            type="text"
-            value={tempProject.imageUrl}
-            onChange={(e) => {
-              setChanged(true);
-              setTempProject({ ...tempProject, imageUrl: e.target.value });
-            }}
-          />
-        </StyledLabel>
+  //       <StyledLabel>
+  //         Image Url
+  //         <StyledInput
+  //           type="text"
+  //           value={tempProject.imageUrl}
+  //           onChange={(event) => {
+  //             setChanged(true);
+  //             setTempProject({ ...tempProject, imageUrl: event.target.value });
+  //           }}
+  //         />
+  //       </StyledLabel>
 
-        <button type="submit">Submit</button>
-      </StyledForm>
-    );
-  };
+  //       <button type="submit">Submit</button>
+  //     </StyledForm>
+  //   );
+  // };
 
   return (
     <section>
@@ -102,8 +109,8 @@ export function Project(props) {
         title={project.projectName}
         description={project.description}
       />
-      <StyledButton onClick={() => handleEdit(id)}>Edit</StyledButton>
-      {updateState === id ? <EditForm /> : null}
+      <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
+      {updateState === id ? <EditForm project={project} /> : null}
     </section>
   );
 }
