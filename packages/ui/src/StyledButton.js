@@ -14,7 +14,6 @@ export const StyledButton = styled('button')(
         height: '30px',
         borderRadius: '50%',
       },
-      MailtoButton: {},
     },
   })
 );

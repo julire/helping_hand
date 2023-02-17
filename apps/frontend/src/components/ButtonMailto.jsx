@@ -1,19 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledButton } from 'ui';
+import { StyledEmailIcon } from 'ui';
+import { Email } from '@styled-icons/material';
 
-export const ButtonMailto = ({ mailto, label }) => {
+export const ButtonMailto = ({ mailto }) => {
   return (
-    <StyledButton variant="MailtoButton">
-      <Link
-        to="#"
-        onClick={(e) => {
-          window.location.href = mailto;
-          e.preventDefault();
-        }}
-      >
-        {label}
-      </Link>
-    </StyledButton>
+    <Link
+      to="#"
+      onClick={(e) => {
+        window.location.href = mailto;
+        e.preventDefault();
+      }}
+    >
+      <StyledEmailIcon size="75" />
+    </Link>
   );
 };

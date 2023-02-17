@@ -34,10 +34,7 @@ export function Project(props) {
         title={project.projectName}
         description={project.description}
       />
-      <ButtonMailto
-        label={<span className="material-symbols-outlined">mail</span>}
-        mailto={`mailto:${project.contactEmail}`}
-      />
+      <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
     </section>
   );
 }
