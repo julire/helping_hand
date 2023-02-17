@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { useParams } from 'react-router-dom';
+import { ButtonMailto } from '../components/ButtonMailto';
 
 export function Project(props) {
   const [project, setProject] = useState({
     projectName: '',
     description: '',
     imageUrl: '',
+    contactEmail: '',
   });
 
   let { id } = useParams();
@@ -31,6 +33,10 @@ export function Project(props) {
         projectImg={project.imageUrl}
         title={project.projectName}
         description={project.description}
+      />
+      <ButtonMailto
+        label={<span className="material-symbols-outlined">mail</span>}
+        mailto={`mailto:${project.contactEmail}`}
       />
     </section>
   );
