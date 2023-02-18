@@ -12,7 +12,7 @@ export const ButtonMailto = ({ mailto }) => {
         e.preventDefault();
       }}
     >
-      <StyledEmailIcon size="75" />
+      <StyledEmailIcon size="35" />
     </Link>
   );
 };

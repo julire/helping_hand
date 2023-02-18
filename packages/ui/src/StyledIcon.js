@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import variant from '@styled-system/variant';
-import { Email } from '@styled-icons/material';
+import { Email, Home, Add } from '@styled-icons/material';
 
 export const StyledEmailIcon = styled(Email)(
   {
@@ -10,3 +10,11 @@ export const StyledEmailIcon = styled(Email)(
     variants: {},
   })
 );
+
+export const StyledHomeIcon = styled(Home)({
+  color: '#E38933',
+});
+
+export const StyledAddIcon = styled(Add)({
+  color: '#E38933',
+});
