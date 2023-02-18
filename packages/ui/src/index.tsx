@@ -10,3 +10,4 @@ export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
 export { StyledImg } from './StyledImg';
 export { StyledButton } from './StyledButton';
+export { StyledLink } from './StyledLink';
