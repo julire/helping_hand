@@ -7,8 +7,10 @@ import { ButtonMailto } from '../components/ButtonMailto';
 import {
   MainNav,
   NavLi,
+  StyledBackIcon,
   StyledButton,
   StyledContainer,
+  StyledDeleteIcon,
   StyledHomeIcon,
 } from 'ui';
 
@@ -35,6 +37,10 @@ export function Project(props) {
       .catch((e) => console.log(e));
   };
 
+  const goBack = () => {
+    navigate(-1);
+  };
+
   const deleteProject = (id) => {
     ProjectDataService.delete(id)
       .then((response) => {
@@ -46,18 +52,21 @@ export function Project(props) {
 
   return (
     <>
-      <section>
-        <StyledButton onClick={() => deleteProject(id)} variant="IconButton">
-          <span className="material-symbols-outlined">delete</span>
+      <StyledContainer variant="FlexWrapper">
+        <StyledButton onClick={goBack} variant="IconButton">
+          <StyledBackIcon size="30" />
         </StyledButton>
+        <StyledButton onClick={() => deleteProject(id)} variant="IconButton">
+          <StyledDeleteIcon size="25" />
+        </StyledButton>
+      </StyledContainer>
 
-        <ProjectContainer
-          id={project.id}
-          projectImg={project.imageUrl}
-          title={project.projectName}
-          description={project.description}
-        />
-      </section>
+      <ProjectContainer
+        id={project.id}
+        projectImg={project.imageUrl}
+        title={project.projectName}
+        description={project.description}
+      />
       <StyledContainer variant="NavWrapper">
         <MainNav>
           <NavLi>

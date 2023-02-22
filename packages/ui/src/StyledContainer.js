@@ -58,6 +58,10 @@ export const StyledContainer = styled('div')(
         paddingTop: '32px',
         paddingBottom: '10px',
       },
+      FlexWrapper: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+      },
     },
   })
 );
