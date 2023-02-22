@@ -8,10 +8,10 @@ export const StyledButton = styled('button')(
   },
   variant({
     variants: {
-      BackButton: {
+      IconButton: {
         padding: '0',
-        width: '30px',
-        height: '30px',
+        width: '35px',
+        height: '35px',
         borderRadius: '50%',
       },
     },

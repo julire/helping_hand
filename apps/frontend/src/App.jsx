@@ -3,7 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Project, Projects, Form } from './pages/';
 import { Navbar } from './components/';
-import { StyledContainer, StyledH1 } from 'ui';
+import { StyledButton, StyledContainer, StyledH1 } from 'ui';
 
 function App() {
   return (

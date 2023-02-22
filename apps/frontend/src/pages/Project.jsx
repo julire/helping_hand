@@ -1,18 +1,31 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
-import { useParams } from 'react-router-dom';
-import { StyledButton, StyledForm, StyledInput, StyledLabel } from 'ui';
 import { EditForm } from './EditForm';
 
+import { ButtonMailto } from '../components/ButtonMailto';
+import {
+  MainNav,
+  NavLi,
+  StyledBackIcon,
+  StyledButton,
+  StyledContainer,
+  StyledDeleteIcon,
+  StyledHomeIcon,
+} from 'ui';
+
 export function Project() {
+  const navigate = useNavigate();
+
   const [updateState, setUpdateState] = useState(-1);
 
   const [project, setProject] = useState({
     projectName: '',
     description: '',
     imageUrl: '',
+    contactEmail: '',
   });
 
   let { id } = useParams();
@@ -32,9 +45,30 @@ export function Project() {
   function handleEditClick(id) {
     setUpdateState(id);
   }
+  const goBack = () => {
+    navigate(-1);
+  };
+
+  const deleteProject = (id) => {
+    ProjectDataService.delete(id)
+      .then((response) => {
+        console.log(response);
+        navigate('/');
+      })
+      .catch((e) => console.log(e));
+  };
 
   return (
-    <section>
+    <>
+      <StyledContainer variant="FlexWrapper">
+        <StyledButton onClick={goBack} variant="IconButton">
+          <StyledBackIcon size="30" />
+        </StyledButton>
+        <StyledButton onClick={() => deleteProject(id)} variant="IconButton">
+          <StyledDeleteIcon size="25" />
+        </StyledButton>
+      </StyledContainer>
+
       <ProjectContainer
         id={project.id}
         projectImg={project.imageUrl}
@@ -50,6 +84,18 @@ export function Project() {
           </StyledButton>
         </>
       ) : null}
-    </section>
+      <StyledContainer variant="NavWrapper">
+        <MainNav>
+          <NavLi>
+            <Link to="/">
+              <StyledHomeIcon size="35" />
+            </Link>
+          </NavLi>
+          <NavLi>
+            <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
+          </NavLi>
+        </MainNav>
+      </StyledContainer>
+    </>
   );
 }

@@ -1,4 +1,11 @@
 import * as React from 'react';
+export {
+  StyledEmailIcon,
+  StyledHomeIcon,
+  StyledAddIcon,
+  StyledBackIcon,
+  StyledDeleteIcon,
+} from './StyledIcon';
 export { NewButton } from './NewButton';
 export { CardHeading } from './StyledCard';
 export { MainNav, NavLi, NavItem } from './StyledNavbar';
@@ -10,3 +17,4 @@ export { StyledInput } from './StyledInput';
 export { StyledLabel } from './StyledLabel';
 export { StyledImg } from './StyledImg';
 export { StyledButton } from './StyledButton';
+export { StyledLink } from './StyledLink';

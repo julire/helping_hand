@@ -12,6 +12,10 @@ class ProjectDataService {
   updateProject(id, project) {
     return axios.put(`http://localhost:5001/projects/${id}`, project);
   }
+
+  delete(id) {
+    return axios.delete(`http://localhost:5001/projects/${id}`);
+  }
 }
 
 export default new ProjectDataService();

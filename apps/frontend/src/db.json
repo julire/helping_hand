@@ -1,14 +1,44 @@
 [
   {
-    "id": 1,
-    "projectImg": "https://www.doctorswithoutborders.org/sites/default/files/MSF163911%28High%29_0.jpg",
-    "title": "Project 1",
-    "description": "This is the description of project 1"
+    "projectName": "Save the whale sharks",
+    "description": "Our shark internship program offers a unique experience and platform for students and volunteers to gain hands on field experience working with shark research in and around the Gulf of California, alongside our team of experienced field technicians and shark specialists. \nAll participants who join our program will have the opportunity to be involved in every research component of our shark monitoring programs, you will increase your understanding of shark research through scientific lectures and many hours of practical training in the field as well as gain experience in an office environment. \nThe internship program has a maximum of 3 internship placements available at any given time as a way to ensure a more valuable volunteer experience in the field with sharks and an increased opportunity for personal development during your internship with us. \nOur internship program is open to absolutely ANYONE. Whether you are a graduate of marine biology or someone who is looking to start their early career in marine biology or just passionate about sharks and want to help our program is perfect for you.",
+    "imageUrl": "https://image.volunteerworld.com/43bc95f5f8cfcfbd0…?auto=format&crop=faces&fit=crop&h=768.375&w=1366",
+    "contactEmail": "email@shark-research.com"
   },
   {
-    "id": 2,
-    "projectImg": "https://www.greenpeace.org/static/planet4-eastasia-stateless/2016/06/57ad1ec0-gp02d1n_web_size_with_credit_line.jpg",
-    "title": "Project 2",
-    "description": "This is the description of project 2"
+    "projectName": "Sea Turtle Conservation",
+    "description": "Volunteer to protect Olive Ridley sea turtles in Bahia Tambor, a beautiful 6 km beach in the south of Nicoya Peninsula. \n As a volunteer you will take part in various conservation activities, including night and morning patrols, relocating nests, recording scientific data, nest exhumations, baby turtles releases, construction activities, beach clean ups, environmental education and ecotourism activities.",
+    "imageUrl": "https://image.volunteerworld.com/8b0a6146321143355…1.jpg?auto=format&crop=faces&fit=crop&h=540&w=9609",
+    "contactEmail": "email@turtle-conservation.com"
+  },
+  {
+    "projectName": "Teach English in Bangkok",
+    "description": "If you can speak and write fluent English … then you are the right person to join our volunteer program to teach English in Thailand. The idea of our program is 'fun based'. The main focus is teaching vocabulary lessons by using drawing or action tools. Secondary priority lesson idea should be simple conversation. Such as: How many ........ ? How old are you ? What is your favorite pet ? \n These should be simple question or conversation that the children will use as daily routine. We'd like to give space and flexibility to our volunteers to use alternative forms of teaching, which they themselves will find fun and educational, and which will motivate Thai children to learn and speak English. We believe that “learning by playing” will give kids a better experience and eventually a better understanding of English, rather than teaching the 'traditional way'.",
+    "imageUrl": "https://image.volunteerworld.com/bc33739adeb91d331…?auto=format&crop=faces&fit=crop&h=433.6875&w=771",
+    "contactEmail": "contact@teach-bangkok.com"
+  },
+  {
+    "projectName": "Construction and renovation",
+    "description": "Help build and renovate low income housing, schools and community centers.\nAre you handy? Volunteer in construction in Costa Rica and get your hands dirty by building and renovating in low-income communities.\nAs a volunteer in Costa Rica, you will be building or renovating schools, community centers and houses in impoverished communities. If you have experience in construction you will be assigned specific tasks, but if you don’t you will be assisting staff or more experienced volunteers in the project.\nThe construction program in Costa Rica is great for people who like working in teams and like manual tasks. As a volunteer in construction, you could be painting, mixing cement, laying bricks, cutting wood, moving earth, drilling and more.",
+    "imageUrl": "https://image.volunteerworld.com/0d9bc8771815d4cbd…uto=format&crop=faces&fit=crop&h=1357.3125&w=2413",
+    "contactEmail": "email@construction.com"
+  },
+  {
+    "projectName": "Elephant conservation",
+    "description": "Give your contribution towards wildlife monitoring & conservation; learn about animal behaviour, reserve management and anti-poaching while living a lifetime experience!\nThe aim of the LEO Africa research project is to provide park wardens and ecologists with detailed information about wildlife within Abelana Game Reserve. This information is used to evaluate the impact of re-introduced animals and to maintain balanced, stable, and sustainable ecosystems.",
+    "imageUrl": "https://image.volunteerworld.com/a92bc86a10f700ce6…e0/1-IMG_4040.jpg?auto=format&crop=faces&fit=crop",
+    "contactEmail": "savethe@elephant.com"
+  },
+  {
+    "projectName": "Women Empowerment and Education",
+    "description": "Teach low income and vulnerable women to overcome difficult situations by giving them tools through education to improve their quality of life.\nThe women empowerment program aims to teach low income and vulnerable women to overcome difficult situations by giving them tools through education to improve their quality of life and of their families'. Volunteers can help better the livelihood of Costa Rican women by teaching them useful skills and improving their self-esteem.\nAs a volunteer in the women empowerment program, you will be working in various areas of the project like:\n- Education: Volunteers can teach skills that are useful to the women in the project. Common subjects include basic financial literacy, entrepreneurship coaching, income generating side projects, organizational and time management skills, etc \n- Psychological support: Some women attending this project come from abusive situations and support is always needed to help them gain confidence once again. The support can include self-esteem workshops or if you have the necessary experience, it can be in the form of psychological consultation.\n- Marketing: Volunteers can help to market products made by women in the project and to help the project gain more visibility. Help in marketing can be digital or through traditional means.",
+    "imageUrl": "https://image.volunteerworld.com/6ce77ad93204a9ee0…g?auto=format&crop=faces&fit=crop&h=322.875&w=574",
+    "contactEmail": "educate@women.com"
+  },
+  {
+    "projectName": "Community Water Projects",
+    "description": "Hands-on, personalized internship to help low-income, indigenous communities gain access to clean drinking water through community education and infrastructure projects.\nSafe and accessible drinking water is a human right. However in Atandahua and surrounding communities, people have serious due to water contamination, deforestation, and lack of storage and filtration. Domestic water is simply captured rainwater from an open air stream, which often carries soil and chemicals from farming uphill. There is no filtration and limited storage, leading to high rates of gastro-intestinal issues and regular water shut offs during the summer or when a pipe is ruptured.",
+    "imageUrl": "https://image.volunteerworld.com/81c151b90369e03a9…ga-Canal-B-10.jpg?auto=format&crop=faces&fit=crop",
+    "contactEmail": "water-for-all@water.com"
   }
 ]

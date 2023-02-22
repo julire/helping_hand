@@ -32,7 +32,7 @@ export const StyledContainer = styled('div')(
         overflow: 'hidden',
         padding: '0 0 32px',
         margin: '48px auto 0',
-        width: '300px',
+        width: '75%',
         boxShadow:
           '0 0 20px rgba(0, 0, 0, 0.05), 0 0px 40px rgba(0, 0, 0, 0.08)',
         borderRadius: '5px',
@@ -55,7 +55,12 @@ export const StyledContainer = styled('div')(
         justifyContent: 'start',
       },
       CardHeader: {
-        padding: '32px 0',
+        paddingTop: '32px',
+        paddingBottom: '10px',
+      },
+      FlexWrapper: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
       },
     },
   })
