@@ -25,6 +25,7 @@ const createProject = (req, res) => {
     projectName: req.body.projectName,
     description: req.body.description,
     imageUrl: req.body.imageUrl,
+    contactEmail: req.body.contactEmail,
   });
 
   project.save((err, project) => {

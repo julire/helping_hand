@@ -24,7 +24,7 @@ export function Projects() {
             id={project._id}
             imageUrl={project.imageUrl}
             projectName={project.projectName}
-            description={project.description}
+            description={project.description.substring(0, 250)}
           />
         </li>
       ))}
