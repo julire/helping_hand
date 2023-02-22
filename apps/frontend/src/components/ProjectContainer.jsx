@@ -1,6 +1,11 @@
 import { StyledContainer, StyledImg, StyledH1 } from 'ui';
 
-export function ProjectContainer({ projectImg, title, description }) {
+export function ProjectContainer({
+  projectImg,
+  title,
+  description,
+  contactEmail,
+}) {
   return (
     <StyledContainer variant="ProjectContainer">
       <StyledImg src={projectImg} alt="" />
