@@ -1,4 +1,5 @@
 import * as React from 'react';
+export { StyledEmailIcon, StyledHomeIcon, StyledAddIcon } from './StyledIcon';
 export { NewButton } from './NewButton';
 export { CardHeading } from './StyledCard';
 export { MainNav, NavLi, NavItem } from './StyledNavbar';

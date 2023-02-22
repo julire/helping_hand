@@ -44,6 +44,7 @@ const updateProject = (req, res) => {
         projectName: req.body.projectName,
         description: req.body.description,
         imageUrl: req.body.imageUrl,
+        contactEmail: req.body.contactEmail,
       },
     },
     { new: true },
