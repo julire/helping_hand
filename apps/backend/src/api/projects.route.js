@@ -50,7 +50,7 @@ const updateProject = (req, res) => {
     { new: true },
     (err, Project) => {
       if (err) {
-        res.sed(err);
+        res.send(err);
       } else res.json(Project);
     }
   );

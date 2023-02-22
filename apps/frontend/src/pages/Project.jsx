@@ -3,6 +3,8 @@ import { Link, useNavigate, useParams } from 'react-router-dom';
 import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
+import { EditForm } from './EditForm';
+
 import { ButtonMailto } from '../components/ButtonMailto';
 import {
   MainNav,
@@ -14,8 +16,10 @@ import {
   StyledHomeIcon,
 } from 'ui';
 
-export function Project(props) {
+export function Project() {
   const navigate = useNavigate();
+
+  const [updateState, setUpdateState] = useState(-1);
 
   const [project, setProject] = useState({
     projectName: '',
@@ -25,6 +29,7 @@ export function Project(props) {
   });
 
   let { id } = useParams();
+
   useEffect(() => {
     getProject();
   }, []);
@@ -34,9 +39,12 @@ export function Project(props) {
       .then((response) => {
         setProject(response.data.data[0]);
       })
-      .catch((e) => console.log(e));
+      .catch((event) => console.log(event));
   };
 
+  function handleEditClick(id) {
+    setUpdateState(id);
+  }
   const goBack = () => {
     navigate(-1);
   };
@@ -67,6 +75,15 @@ export function Project(props) {
         title={project.projectName}
         description={project.description}
       />
+      <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
+      {updateState === id ? (
+        <>
+          <EditForm updateState={updateState} project={project} />
+          <StyledButton onClick={() => handleEditClick(-1)}>
+            Cancel
+          </StyledButton>
+        </>
+      ) : null}
       <StyledContainer variant="NavWrapper">
         <MainNav>
           <NavLi>
