@@ -18,13 +18,9 @@ export function Navbar() {
           </Link>
         </NavLi>
         <NavLi>
-          {window.location.href.includes('projects') ? (
-            <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
-          ) : (
-            <Link to="/add-project">
-              <StyledAddIcon size="35" />
-            </Link>
-          )}
+          <Link to="/add-project">
+            <StyledAddIcon size="35" />
+          </Link>
         </NavLi>
       </MainNav>
     </StyledContainer>

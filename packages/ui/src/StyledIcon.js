@@ -4,7 +4,7 @@ import { Email, Home, Add, ArrowLeft, Delete } from '@styled-icons/material';
 
 export const StyledEmailIcon = styled(Email)(
   {
-    color: '#E38933',
+    color: '#333',
   },
   variant({
     variants: {},

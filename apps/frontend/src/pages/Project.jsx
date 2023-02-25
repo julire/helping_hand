@@ -75,6 +75,8 @@ export function Project() {
         title={project.projectName}
         description={project.description}
       />
+      <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
+
       <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
       {updateState === id ? (
         <>
