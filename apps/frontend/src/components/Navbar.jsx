@@ -5,28 +5,24 @@ import {
   StyledHomeIcon,
   StyledAddIcon,
 } from 'ui';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useParams } from 'react-router-dom';
+import { ButtonMailto } from './ButtonMailto';
 
 export function Navbar() {
-  const location = useLocation();
-  const path = location.pathname;
-  console.log(path);
   return (
     <StyledContainer variant="NavWrapper">
-      {path === '/' ? (
-        <MainNav>
-          <NavLi>
-            <Link to="/">
-              <StyledHomeIcon size="35" />
-            </Link>
-          </NavLi>
-          <NavLi>
-            <Link to="/add-project">
-              <StyledAddIcon size="35" />
-            </Link>
-          </NavLi>
-        </MainNav>
-      ) : null}
+      <MainNav>
+        <NavLi>
+          <Link to="/">
+            <StyledHomeIcon size="35" />
+          </Link>
+        </NavLi>
+        <NavLi>
+          <Link to="/add-project">
+            <StyledAddIcon size="35" />
+          </Link>
+        </NavLi>
+      </MainNav>
     </StyledContainer>
   );
 }

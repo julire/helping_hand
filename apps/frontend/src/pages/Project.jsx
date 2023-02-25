@@ -4,16 +4,11 @@ import ProjectDataService from '../services/projects';
 
 import { ProjectContainer } from '../components/ProjectContainer';
 import { EditForm } from './EditForm';
-
-import { ButtonMailto } from '../components/ButtonMailto';
 import {
-  MainNav,
-  NavLi,
   StyledBackIcon,
   StyledButton,
   StyledContainer,
   StyledDeleteIcon,
-  StyledHomeIcon,
 } from 'ui';
 
 export function Project() {
@@ -74,28 +69,22 @@ export function Project() {
         projectImg={project.imageUrl}
         title={project.projectName}
         description={project.description}
+        contactEmail={project.contactEmail}
       />
-      <StyledButton variant="EditWrapper" onClick={() => handleEditClick(id)}>Edit</StyledButton>
+      <StyledButton variant="EditWrapper" onClick={() => handleEditClick(id)}>
+        Edit
+      </StyledButton>
       {updateState === id ? (
         <>
           <EditForm updateState={updateState} project={project} />
-          <StyledButton variant="EditWrapper" onClick={() => handleEditClick(-1)}>
+          <StyledButton
+            variant="EditWrapper"
+            onClick={() => handleEditClick(-1)}
+          >
             Cancel
           </StyledButton>
         </>
       ) : null}
-      <StyledContainer variant="NavWrapper">
-        <MainNav>
-          <NavLi>
-            <Link to="/">
-              <StyledHomeIcon size="35" />
-            </Link>
-          </NavLi>
-          <NavLi>
-            <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
-          </NavLi>
-        </MainNav>
-      </StyledContainer>
     </>
   );
 }

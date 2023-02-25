@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { StyledEmailIcon } from 'ui';
-import { Email } from '@styled-icons/material';
+import { StyledButton, StyledEmailIcon } from 'ui';
 
 export const ButtonMailto = ({ mailto }) => {
   return (
-    <Link
+    <StyledButton
       to="#"
       onClick={(e) => {
         window.location.href = mailto;
@@ -13,6 +12,6 @@ export const ButtonMailto = ({ mailto }) => {
       }}
     >
       <StyledEmailIcon size="35" />
-    </Link>
+    </StyledButton>
   );
 };
