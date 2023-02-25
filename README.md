@@ -1,35 +1,43 @@
-# Turborepo kitchen sink starter
+# Helping Hand
 
-This is an official starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
+Helping Hand is an app to help you locate local volunteer projects to join.
 
-## What's inside?
-
-This Turborepo includes the following packages and apps:
+Helping Hand is the final project of group 7 from Techlabs Hamburg Winter 2022.
 
 ### Apps and Packages
+
+We used Turborepo to manage our monorepo build. The projct consists of the following packages:
 
 - `backend`: an [Express](https://expressjs.com/) server
 - `frontend`: a [Vite](https://vitejs.dev/) single page app
 - `logger`: isomorphic logger (a small wrapper around console.log)
-- `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
+- `ui`: a React UI library
 - `scripts`: Jest and ESLint configurations
 - `tsconfig`: tsconfig.json;s used throughout the monorepo
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
-
-## Using this example
+## Using this repo
 
 Run the following command:
+
+Install dependencies
 
 ```sh
 pnpm install
 ```
+
+Run dev server
+
+```sh
+pnpm dev
+```
+
+## Features
+
+- Add a new volunteer opportunity
+- Apply to projects as a volunteer
+
+## Authors
+
+- [@Jordan-Patel](https://github.com/Jordan-Patel)
+- [@Julia-Reshöft](https://github.com/julire)
+- [@Amanpreet-Chalga](https://github.com/amanpreetchalga)
