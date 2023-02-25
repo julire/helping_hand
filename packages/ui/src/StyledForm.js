@@ -1,10 +1,9 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledForm = styled.form`
-  border: 2px solid black;
-  padding: 20px;
+  width: 100%;
+  padding: 40px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
+  gap: 25px;
 `;

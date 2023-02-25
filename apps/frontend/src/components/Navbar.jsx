@@ -1,20 +1,32 @@
-import { StyledContainer, MainNav, NavLi, NavLink } from 'ui';
+import {
+  StyledContainer,
+  MainNav,
+  NavLi,
+  StyledHomeIcon,
+  StyledAddIcon,
+} from 'ui';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Navbar() {
+  const location = useLocation();
+  const path = location.pathname;
+  console.log(path);
   return (
     <StyledContainer variant="NavWrapper">
-      <MainNav>
-        <NavLi>
-          <NavLink href="/">
-            <span className="material-symbols-outlined">home</span>
-          </NavLink>
-        </NavLi>
-        <NavLi>
-          <NavLink href="/add-project">
-            <span className="material-symbols-outlined">add</span>
-          </NavLink>
-        </NavLi>
-      </MainNav>
+      {path === '/' ? (
+        <MainNav>
+          <NavLi>
+            <Link to="/">
+              <StyledHomeIcon size="35" />
+            </Link>
+          </NavLi>
+          <NavLi>
+            <Link to="/add-project">
+              <StyledAddIcon size="35" />
+            </Link>
+          </NavLi>
+        </MainNav>
+      ) : null}
     </StyledContainer>
   );
 }

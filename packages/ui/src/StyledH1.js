@@ -10,6 +10,10 @@ export const StyledH1 = styled('h1')(
       AppTitle: {
         fontSize: '65px',
       },
+      ProjectTitle: {
+        color: 'white',
+        paddingLeft: '25px',
+      },
     },
   })
 );
