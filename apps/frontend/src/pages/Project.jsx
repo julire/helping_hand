@@ -76,12 +76,16 @@ export function Project() {
         description={project.description}
       />
       <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
-
-      <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
+      <StyledButton variant="EditWrapper" onClick={() => handleEditClick(id)}>
+        Edit
+      </StyledButton>
       {updateState === id ? (
         <>
           <EditForm updateState={updateState} project={project} />
-          <StyledButton onClick={() => handleEditClick(-1)}>
+          <StyledButton
+            variant="EditWrapper"
+            onClick={() => handleEditClick(-1)}
+          >
             Cancel
           </StyledButton>
         </>

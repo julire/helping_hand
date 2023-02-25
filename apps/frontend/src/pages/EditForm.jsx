@@ -60,6 +60,7 @@ export const EditForm = (props) => {
           />
         </StyledLabel>
 
+
         <StyledLabel>
           Image Url
           <StyledInput

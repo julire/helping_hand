@@ -1,4 +1,4 @@
-import { StyledForm, StyledInput, StyledLabel } from "ui";
+import { StyledButton, StyledForm, StyledInput, StyledLabel } from "ui";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
@@ -34,10 +34,10 @@ export function Form() {
   return (
     <StyledForm onSubmit={handleSubmit}>
       <StyledLabel>
-        Project Title
+        
         <StyledInput
           type="text"
-          placeholder="Type the title of your project here"
+          placeholder="Project Title"
           required
           value={project.projectName}
           onChange={(event) => {
@@ -47,11 +47,11 @@ export function Form() {
       </StyledLabel>
 
       <StyledLabel>
-        Description
+        
         <StyledInput
           variant="projectDescription"
           type="text"
-          placeholder="Type a description of your project here"
+          placeholder="Description"
           required
           value={project.description}
           onChange={(event) => {
@@ -61,9 +61,10 @@ export function Form() {
       </StyledLabel>
 
       <StyledLabel>
-        Image Url
+        
         <StyledInput
           type="text"
+          placeholder="Image Url"
           value={project.imageUrl}
           onChange={(event) => {
             setProject({ ...project, imageUrl: event.target.value });
@@ -72,10 +73,10 @@ export function Form() {
       </StyledLabel>
 
       <StyledLabel>
-        Email Address
+        
         <StyledInput
           type="email"
-          placeholder="Example: mustermann@mustermann-gmbh.de"
+          placeholder="Email Address"
           required
           value={project.contactEmail}
           onChange={(event) => {
@@ -84,7 +85,7 @@ export function Form() {
         />
       </StyledLabel>
 
-      <button type="submit">Submit</button>
+      <StyledButton type="submit">Submit</StyledButton>
     </StyledForm>
   );
 }
