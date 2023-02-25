@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import variant from "@styled-system/variant";
+import variant from '@styled-system/variant';
 
 export const StyledButton = styled.button`
   padding: 10px 25px;
@@ -8,9 +8,10 @@ export const StyledButton = styled.button`
   border: none;
   background-color: var(--colors-highlight);
   width: 50%;
+  margin-bottom: 5px;
 
   ${({ variant }) =>
-    variant === "IconButton" &&
+    variant === 'IconButton' &&
     css`
       padding: 0;
       width: 35px;
@@ -18,8 +19,8 @@ export const StyledButton = styled.button`
       border-radius: 50%;
     `}
 
-    ${({ variant }) =>
-    variant === "EditWrapper" &&
+  ${({ variant }) =>
+    variant === 'EditWrapper' &&
     css`
       border-radius: 15px;
       width: auto;

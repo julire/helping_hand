@@ -1,4 +1,5 @@
 import { StyledContainer, StyledImg, StyledH1 } from 'ui';
+import { ButtonMailto } from './ButtonMailto';
 
 export function ProjectContainer({
   projectImg,
@@ -13,6 +14,7 @@ export function ProjectContainer({
         <StyledH1 variant="ProjectTitle">{title}</StyledH1>
       </StyledContainer>
       <StyledContainer variant="CardBody">
+        <ButtonMailto mailto={`mailto:${contactEmail}`} />
         <p>{description}</p>
       </StyledContainer>
     </StyledContainer>
