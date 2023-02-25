@@ -75,11 +75,11 @@ export function Project() {
         title={project.projectName}
         description={project.description}
       />
-      <StyledButton onClick={() => handleEditClick(id)}>Edit</StyledButton>
+      <StyledButton variant="EditWrapper" onClick={() => handleEditClick(id)}>Edit</StyledButton>
       {updateState === id ? (
         <>
           <EditForm updateState={updateState} project={project} />
-          <StyledButton onClick={() => handleEditClick(-1)}>
+          <StyledButton variant="EditWrapper" onClick={() => handleEditClick(-1)}>
             Cancel
           </StyledButton>
         </>
