@@ -60,6 +60,8 @@ export const StyledContainer = styled("div")(
       FlexWrapper: {
         flexDirection: "row",
         justifyContent: "space-between",
+        display: "flex",
+        padding: "0 10px",
       },
     },
   })
