@@ -2,31 +2,32 @@ import { StyledForm, StyledInput, StyledLabel } from "ui";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import ProjectDataService from "../services/projects";
 
 export function Form() {
-  const [titleValue, setTitleValue] = useState("");
-  const [descriptionValue, setDescriptionValue] = useState("");
-  const [imagePathValue, setImagePathValue] = useState("");
+  const [project, setProject] = useState({
+    projectName: "",
+    description: "",
+    imageUrl: "",
+    contactEmail: "",
+  });
 
+  const [changed, setChanged] = useState(false);
   const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    fetch(
-      "https://ng-course-recipe-book-a3fea-default-rtdb.europe-west1.firebasedatabase.app/helping-hand.json",
-      {
-        method: "POST",
-        body: JSON.stringify({
-          titleValue,
-          descriptionValue,
-          imagePathValue,
-        }),
-      }
-    );
+    ProjectDataService.createProject(project)
+      .then((response) => {
+        setProject(response.data[0]);
+        setChanged(false);
+      })
+      .catch((event) => {
+        console.log(event);
+      });
 
-    console.log(titleValue, descriptionValue, imagePathValue);
-
+    console.log(project);
     navigate("/");
   }
 
@@ -38,9 +39,9 @@ export function Form() {
           type="text"
           placeholder="Type the title of your project here"
           required
-          value={titleValue}
+          value={project.projectName}
           onChange={(event) => {
-            setTitleValue(event.target.value);
+            setProject({ ...project, projectName: event.target.value });
           }}
         />
       </StyledLabel>
@@ -52,9 +53,9 @@ export function Form() {
           type="text"
           placeholder="Type a description of your project here"
           required
-          value={descriptionValue}
+          value={project.description}
           onChange={(event) => {
-            setDescriptionValue(event.target.value);
+            setProject({ ...project, description: event.target.value });
           }}
         />
       </StyledLabel>
@@ -63,9 +64,22 @@ export function Form() {
         Image Url
         <StyledInput
           type="text"
-          value={imagePathValue}
+          value={project.imageUrl}
           onChange={(event) => {
-            setImagePathValue(event.target.value);
+            setProject({ ...project, imageUrl: event.target.value });
+          }}
+        />
+      </StyledLabel>
+
+      <StyledLabel>
+        Email Address
+        <StyledInput
+          type="email"
+          placeholder="Example: mustermann@mustermann-gmbh.de"
+          required
+          value={project.contactEmail}
+          onChange={(event) => {
+            setProject({ ...project, contactEmail: event.target.value });
           }}
         />
       </StyledLabel>

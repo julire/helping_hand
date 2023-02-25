@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 class ProjectDataService {
   getAll() {
@@ -15,6 +15,10 @@ class ProjectDataService {
 
   delete(id) {
     return axios.delete(`http://localhost:5001/projects/${id}`);
+  }
+
+  createProject(project) {
+    return axios.post("http://localhost:5001/projects", project);
   }
 }
 
