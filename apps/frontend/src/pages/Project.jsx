@@ -84,18 +84,6 @@ export function Project() {
           </StyledButton>
         </>
       ) : null}
-      <StyledContainer variant="NavWrapper">
-        <MainNav>
-          <NavLi>
-            <Link to="/">
-              <StyledHomeIcon size="35" />
-            </Link>
-          </NavLi>
-          <NavLi>
-            <ButtonMailto mailto={`mailto:${project.contactEmail}`} />
-          </NavLi>
-        </MainNav>
-      </StyledContainer>
     </>
   );
 }
