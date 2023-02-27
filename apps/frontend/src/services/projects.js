@@ -1,24 +1,30 @@
-import axios from "axios";
+import axios from 'axios';
 
 class ProjectDataService {
   getAll() {
-    return axios.get(`http://localhost:5001/projects`);
+    return axios.get(`https://helping-hand-api.onrender.com/projects`);
   }
 
   get(id) {
-    return axios.get(`http://localhost:5001/projects/${id}`);
+    return axios.get(`https://helping-hand-api.onrender.com/projects/${id}`);
   }
 
   updateProject(id, project) {
-    return axios.put(`http://localhost:5001/projects/${id}`, project);
+    return axios.put(
+      `https://helping-hand-api.onrender.com/projects/${id}`,
+      project
+    );
   }
 
   delete(id) {
-    return axios.delete(`http://localhost:5001/projects/${id}`);
+    return axios.delete(`https://helping-hand-api.onrender.com/projects/${id}`);
   }
 
   createProject(project) {
-    return axios.post("http://localhost:5001/projects", project);
+    return axios.post(
+      'https://helping-hand-api.onrender.com/projects',
+      project
+    );
   }
 }
 
